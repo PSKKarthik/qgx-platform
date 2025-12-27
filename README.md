@@ -360,7 +360,7 @@ For issues or questions:
 ## 🔗 Links
 
 - **Live Demo:** [qgx-platform.vercel.app](https://qgx-platform.vercel.app)
-- **GitHub:** [github.com/YOUR_USERNAME/qgx-platform](https://github.com/YOUR_USERNAME/qgx-platform)
+- **GitHub:** [github.com/PSKKarthik/qgx-platform](https://github.com/PSKKarthik/qgx-platform)
 - **Documentation:** See docs/ folder
 
 ---

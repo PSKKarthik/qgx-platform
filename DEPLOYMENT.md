@@ -42,8 +42,8 @@ Before deploying, ensure you have:
    # Create initial commit
    git commit -m "Initial QGX platform launch"
    
-   # Add GitHub as remote (replace YOUR_USERNAME)
-   git remote add origin https://github.com/YOUR_USERNAME/qgx-platform.git
+   # Add GitHub as remote
+   git remote add origin https://github.com/PSKKarthik/qgx-platform.git
    
    # Push to GitHub
    git branch -M main
