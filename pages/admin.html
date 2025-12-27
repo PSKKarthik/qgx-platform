@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - QGX Platform</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h2>Admin Panel</h2>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="profile-card">
+            <div class="profile-photo" id="profilePhoto">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=4facfe&color=fff&size=80" alt="Admin">
+            </div>
+            <h3 id="profileName">Admin User</h3>
+            <p class="profile-role">System Administrator</p>
+            <p class="profile-id" id="profileId">ADM-2025-001</p>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" onclick="navigateTo('dashboard')">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('user-management')">
+                <i class="fas fa-users"></i>
+                <span>User Management</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('course-management')">
+                <i class="fas fa-book"></i>
+                <span>Course Management</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('system-settings')">
+                <i class="fas fa-cog"></i>
+                <span>System Settings</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('security-monitor')">
+                <i class="fas fa-shield-alt"></i>
+                <span>Security Monitor</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('forum-moderation')">
+                <i class="fas fa-comments"></i>
+                <span>Forum Moderation</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('analytics')">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics & Reports</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('backup')">
+                <i class="fas fa-database"></i>
+                <span>Backup & Restore</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('logs')">
+                <i class="fas fa-file-alt"></i>
+                <span>System Logs</span>
+            </a>
+            <a href="login.html" class="nav-item logout" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <div class="view-container active" id="dashboardView">
+            <div class="dashboard-header">
+                <h1>System Dashboard</h1>
+                <p>Welcome back, <span id="welcomeName">Admin</span>! Here's your platform overview.</p>
+            </div>
+
+            <!-- System Health Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 id="totalUsers">450</h3>
+                        <p>Total Users</p>
+                        <span class="stat-change positive">+12% this month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 id="systemHealth">98.5%</h3>
+                        <p>System Uptime</p>
+                        <span class="stat-change positive">Excellent</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 id="securityAlerts">3</h3>
+                        <p>Security Alerts</p>
+                        <span class="stat-change warning">Needs attention</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 id="serverLoad">45%</h3>
+                        <p>Server Load</p>
+                        <span class="stat-change positive">Normal</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Users & Security Alerts -->
+            <div class="dashboard-grid">
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-users-cog"></i> Active Users</h3>
+                        <span class="badge-count" id="activeUserCount">127</span>
+                    </div>
+                    <div class="widget-content" id="activeUsersContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-shield-alt"></i> Recent Security Alerts</h3>
+                        <button class="widget-action" onclick="navigateTo('security-monitor')">View All</button>
+                    </div>
+                    <div class="widget-content" id="securityAlertsContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Usage Stats -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3><i class="fas fa-chart-bar"></i> Platform Usage Stats</h3>
+                    <select class="widget-select" onchange="updateUsageStats(this.value)">
+                        <option value="7">Last 7 Days</option>
+                        <option value="30">Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                    </select>
+                </div>
+                <div class="widget-content">
+                    <div class="usage-stats-grid">
+                        <div class="usage-stat-item">
+                            <div class="usage-stat-value">1,248</div>
+                            <div class="usage-stat-label">Total Logins</div>
+                        </div>
+                        <div class="usage-stat-item">
+                            <div class="usage-stat-value">342</div>
+                            <div class="usage-stat-label">Assessments Created</div>
+                        </div>
+                        <div class="usage-stat-item">
+                            <div class="usage-stat-value">5,678</div>
+                            <div class="usage-stat-label">Submissions</div>
+                        </div>
+                        <div class="usage-stat-item">
+                            <div class="usage-stat-value">89%</div>
+                            <div class="usage-stat-label">Avg Engagement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Management View -->
+        <div class="view-container" id="userManagementView">
+            <div class="dashboard-header">
+                <h1>User Management</h1>
+                <button class="btn-primary" onclick="showAddUserModal()">
+                    <i class="fas fa-user-plus"></i> Add New User
+                </button>
+            </div>
+
+            <!-- User Filters -->
+            <div class="filter-panel">
+                <input type="text" class="search-input" id="userSearch" placeholder="Search users..." onkeyup="filterUsers(this.value)">
+                <select class="filter-select" id="roleFilter" onchange="filterUsers()">
+                    <option value="all">All Roles</option>
+                    <option value="student">Students</option>
+                    <option value="teacher">Teachers</option>
+                    <option value="admin">Admins</option>
+                </select>
+                <select class="filter-select" id="statusFilter" onchange="filterUsers()">
+                    <option value="all">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="suspended">Suspended</option>
+                </select>
+                <button class="btn-secondary" onclick="bulkActions()">
+                    <i class="fas fa-tasks"></i> Bulk Actions
+                </button>
+            </div>
+
+            <!-- User Table -->
+            <div class="widget">
+                <div class="widget-content">
+                    <table class="data-table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" onclick="selectAllUsers(this)"></th>
+                                <th>User</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Last Login</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Settings View -->
+        <div class="view-container" id="systemSettingsView">
+            <div class="dashboard-header">
+                <h1>System Settings</h1>
+                <button class="btn-primary" onclick="saveSystemSettings()">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+
+            <div class="settings-grid">
+                <!-- Feature Toggles -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-toggle-on"></i> Feature Toggles</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Ghost Mode</h4>
+                                <p>Allow students to browse anonymously</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="ghostMode" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Voice Control</h4>
+                                <p>Enable voice commands for assessments</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="voiceControl" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>AI Assessment Generation</h4>
+                                <p>Allow teachers to generate AI-powered questions</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="aiGeneration" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Maintenance Mode</h4>
+                                <p>Put platform in maintenance mode</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="maintenanceMode">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XP Configuration -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-trophy"></i> XP Configuration</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="form-group">
+                            <label>XP per Correct Answer</label>
+                            <input type="number" class="form-input" id="xpPerAnswer" value="10">
+                        </div>
+                        <div class="form-group">
+                            <label>XP for Perfect Score</label>
+                            <input type="number" class="form-input" id="xpPerfectScore" value="50">
+                        </div>
+                        <div class="form-group">
+                            <label>Daily Login Bonus</label>
+                            <input type="number" class="form-input" id="xpDailyBonus" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label>Streak Multiplier</label>
+                            <input type="number" class="form-input" id="xpStreakMultiplier" value="1.5" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Templates -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-envelope"></i> Email Templates</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="form-group">
+                            <label>Template Type</label>
+                            <select class="form-input" id="emailTemplateType" onchange="loadEmailTemplate(this.value)">
+                                <option value="welcome">Welcome Email</option>
+                                <option value="password-reset">Password Reset</option>
+                                <option value="grade-notification">Grade Notification</option>
+                                <option value="assessment-reminder">Assessment Reminder</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" class="form-input" id="emailSubject" value="Welcome to QGX Platform">
+                        </div>
+                        <div class="form-group">
+                            <label>Body</label>
+                            <textarea class="form-input" id="emailBody" rows="6">Welcome to QGX Platform! We're excited to have you on board.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Monitor View -->
+        <div class="view-container" id="securityMonitorView">
+            <div class="dashboard-header">
+                <h1>Security Monitor</h1>
+                <button class="btn-primary" onclick="exportSecurityLogs()">
+                    <i class="fas fa-download"></i> Export Logs
+                </button>
+            </div>
+
+            <div class="security-grid">
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-user-secret"></i> Ghost Mode Activity</h3>
+                    </div>
+                    <div class="widget-content" id="ghostModeActivity">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-key"></i> Login Attempts</h3>
+                    </div>
+                    <div class="widget-content" id="loginAttempts">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-exclamation-circle"></i> Suspicious Activity</h3>
+                    </div>
+                    <div class="widget-content" id="suspiciousActivity">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-history"></i> Recent Actions</h3>
+                    </div>
+                    <div class="widget-content" id="recentActions">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics View -->
+        <div class="view-container" id="analyticsView">
+            <div class="dashboard-header">
+                <h1>Analytics & Reports</h1>
+                <button class="btn-primary" onclick="generateAnalytics()">
+                    <i class="fas fa-file-export"></i> Generate Full Report
+                </button>
+            </div>
+
+            <div class="analytics-controls">
+                <select class="filter-select" onchange="updateAnalytics(this.value)">
+                    <option value="7">Last 7 Days</option>
+                    <option value="30" selected>Last 30 Days</option>
+                    <option value="90">Last 90 Days</option>
+                    <option value="365">Last Year</option>
+                </select>
+                <button class="btn-secondary" onclick="exportAnalytics('csv')">
+                    <i class="fas fa-file-csv"></i> Export CSV
+                </button>
+                <button class="btn-secondary" onclick="exportAnalytics('pdf')">
+                    <i class="fas fa-file-pdf"></i> Export PDF
+                </button>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="widget" style="grid-column: span 2;">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-chart-line"></i> User Growth</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-area"></i>
+                            <p>User Growth Chart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-gauge-high"></i> Performance Metrics</h3>
+                    </div>
+                    <div class="widget-content" id="performanceMetrics">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Views (Course Management, Forum, Backup, Logs) -->
+        <div class="view-container" id="courseManagementView">
+            <div class="dashboard-header">
+                <h1>Course Management</h1>
+                <button class="btn-primary" onclick="showAddCourseModal()">
+                    <i class="fas fa-plus"></i> Add Course
+                </button>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p style="text-align: center; padding: 40px; color: rgba(255,255,255,0.6);">
+                        Course management interface will be displayed here.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-container" id="forumModerationView">
+            <div class="dashboard-header">
+                <h1>Forum Moderation</h1>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p style="text-align: center; padding: 40px; color: rgba(255,255,255,0.6);">
+                        Forum moderation tools will be displayed here.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-container" id="backupView">
+            <div class="dashboard-header">
+                <h1>Backup & Restore</h1>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-secondary" onclick="restoreFromBackup()">
+                        <i class="fas fa-upload"></i> Restore Backup
+                    </button>
+                    <button class="btn-primary" onclick="backupSystem()">
+                        <i class="fas fa-cloud-upload-alt"></i> Create Backup
+                    </button>
+                </div>
+            </div>
+            <div class="widget">
+                <div class="widget-content" id="backupList">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="view-container" id="logsView">
+            <div class="dashboard-header">
+                <h1>System Logs</h1>
+                <button class="btn-secondary" onclick="clearLogs()">
+                    <i class="fas fa-trash"></i> Clear Logs
+                </button>
+            </div>
+            <div class="widget">
+                <div class="widget-content" id="systemLogs">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add User Modal -->
+    <div class="modal" id="addUserModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-plus"></i> Add New User</h3>
+                <button class="modal-close" onclick="closeAddUserModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-input" id="newUserName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-input" id="newUserEmail" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select class="form-input" id="newUserRole">
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-input" id="newUserPassword" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeAddUserModal()">Cancel</button>
+                <button class="btn-primary" onclick="createUser()">
+                    <i class="fas fa-check"></i> Create User
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/admin-enhanced.js"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - QGX</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/teacher.js" defer></script>
+</head>
+<body class="dashboard-page teacher-dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-photo teacher-photo" id="profilePhoto">
+                <img src="https://ui-avatars.com/api/?name=Sarah+Mitchell&background=f5576c&color=fff&size=128" alt="Teacher Photo">
+            </div>
+            <h3 class="profile-name" id="profileName">Dr. Sarah Mitchell</h3>
+            <p class="profile-id" id="profileId">TCH-2025-042</p>
+            <div class="xp-badge teacher-badge">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span id="studentCount">120 Students</span>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="sidebar-nav">
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#" onclick="navigateTo('dashboard')">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('timetable')">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Timetable Management</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('create-assessment')">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Create Assessment</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('student-progress')">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Student Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('live-classes')">
+                        <i class="fas fa-video"></i>
+                        <span>Live Classes</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('materials')">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Materials Library</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('forum')">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum Moderation</span>
+                        <span class="badge">2</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('settings')">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-logout">
+                    <a href="#" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Dashboard View -->
+        <div class="view-container active" id="dashboardView">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="page-title">Dashboard</h1>
+                    <p class="page-subtitle">Welcome back, <span id="welcomeName">Dr. Mitchell</span>!</p>
+                </div>
+                <div class="header-right">
+                    <button class="quick-action-btn" onclick="navigateTo('create-assessment')">
+                        <i class="fas fa-plus"></i>
+                        Create Assessment
+                    </button>
+                    <button class="quick-action-btn secondary" onclick="navigateTo('live-classes')">
+                        <i class="fas fa-video"></i>
+                        Start Class
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Widgets Grid -->
+            <div class="dashboard-grid">
+                <!-- Quick Stats Widget -->
+                <div class="widget stats-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-chart-bar"></i> Quick Stats</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <i class="fas fa-users"></i>
+                                <div class="stat-info">
+                                    <p class="stat-value" id="totalStudents">120</p>
+                                    <p class="stat-label">Total Students</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-clipboard-list"></i>
+                                <div class="stat-info">
+                                    <p class="stat-value" id="activeAssessments">8</p>
+                                    <p class="stat-label">Active Assessments</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-envelope"></i>
+                                <div class="stat-info">
+                                    <p class="stat-value" id="unreadMessages">15</p>
+                                    <p class="stat-label">Unread Messages</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="stat-info">
+                                    <p class="stat-value" id="pendingReviews">23</p>
+                                    <p class="stat-label">Pending Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Classes Widget -->
+                <div class="widget upcoming-classes-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-calendar-day"></i> Upcoming Classes</h3>
+                        <button class="widget-action" onclick="navigateTo('timetable')">View All</button>
+                    </div>
+                    <div class="widget-content" id="upcomingClassesContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Recent Submissions Widget -->
+                <div class="widget submissions-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-file-upload"></i> Recent Submissions</h3>
+                        <button class="widget-action" onclick="viewAllSubmissions()">View All</button>
+                    </div>
+                    <div class="widget-content" id="recentSubmissionsContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Class Performance Widget -->
+                <div class="widget performance-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-chart-pie"></i> Class Performance</h3>
+                        <select class="widget-select" onchange="updatePerformanceChart(this.value)">
+                            <option value="10-A">Class 10-A</option>
+                            <option value="10-B">Class 10-B</option>
+                            <option value="11-A">Class 11-A</option>
+                            <option value="12-A">Class 12-A</option>
+                        </select>
+                    </div>
+                    <div class="widget-content">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Assessment View -->
+        <div class="view-container" id="createAssessmentView">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="page-title">Create Assessment</h1>
+                    <p class="page-subtitle">Generate AI-powered assessments</p>
+                </div>
+            </header>
+
+            <div class="assessment-creator">
+                <div class="creator-section">
+                    <h3><i class="fas fa-upload"></i> Input Method</h3>
+                    <div class="input-methods">
+                        <button class="input-method-btn active" onclick="selectInputMethod('text')">
+                            <i class="fas fa-keyboard"></i>
+                            <span>Text Input</span>
+                        </button>
+                        <button class="input-method-btn" onclick="selectInputMethod('pdf')">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF Upload</span>
+                        </button>
+                        <button class="input-method-btn" onclick="selectInputMethod('image')">
+                            <i class="fas fa-image"></i>
+                            <span>Image Upload</span>
+                        </button>
+                        <button class="input-method-btn" onclick="selectInputMethod('url')">
+                            <i class="fas fa-link"></i>
+                            <span>URL/Web</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="creator-main">
+                    <div class="creator-input">
+                        <div class="input-panel" id="textInputPanel">
+                            <textarea id="assessmentContent" placeholder="Enter the content, topic, or paste text here..." rows="15"></textarea>
+                        </div>
+                        <div class="input-panel" id="pdfInputPanel" style="display: none;">
+                            <div class="upload-area" onclick="document.getElementById('pdfFile').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload PDF or drag and drop</p>
+                                <input type="file" id="pdfFile" accept=".pdf" hidden>
+                            </div>
+                        </div>
+                        <div class="input-panel" id="imageInputPanel" style="display: none;">
+                            <div class="upload-area" onclick="document.getElementById('imageFile').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload image or drag and drop</p>
+                                <input type="file" id="imageFile" accept="image/*" hidden multiple>
+                            </div>
+                        </div>
+                        <div class="input-panel" id="urlInputPanel" style="display: none;">
+                            <input type="url" id="urlInput" placeholder="https://example.com/article">
+                            <button class="fetch-url-btn" onclick="fetchURLContent()">
+                                <i class="fas fa-download"></i> Fetch Content
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="creator-options">
+                        <div class="option-group">
+                            <label>Question Types</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked> Multiple Choice</label>
+                                <label><input type="checkbox"> True/False</label>
+                                <label><input type="checkbox"> Short Answer</label>
+                                <label><input type="checkbox"> Essay</label>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Number of Questions: <span id="questionCount">10</span></label>
+                            <input type="range" min="5" max="50" value="10" oninput="updateQuestionCount(this.value)">
+                        </div>
+
+                        <div class="option-group">
+                            <label>Difficulty Distribution</label>
+                            <div class="slider-group">
+                                <label>Easy: <span id="easyPercent">30</span>%</label>
+                                <input type="range" min="0" max="100" value="30" oninput="updateDifficulty('easy', this.value)">
+                                
+                                <label>Medium: <span id="mediumPercent">50</span>%</label>
+                                <input type="range" min="0" max="100" value="50" oninput="updateDifficulty('medium', this.value)">
+                                
+                                <label>Hard: <span id="hardPercent">20</span>%</label>
+                                <input type="range" min="0" max="100" value="20" oninput="updateDifficulty('hard', this.value)">
+                            </div>
+                        </div>
+
+                        <button class="generate-btn" onclick="generateAssessment()">
+                            <i class="fas fa-magic"></i> Generate Assessment
+                        </button>
+                    </div>
+                </div>
+
+                <div class="preview-panel" id="previewPanel">
+                    <h3><i class="fas fa-eye"></i> Preview</h3>
+                    <div id="previewContent">
+                        <p class="preview-placeholder">Generated questions will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Progress View -->
+        <div class="view-container" id="studentProgressView">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="page-title">Student Progress</h1>
+                    <p class="page-subtitle">Monitor and analyze student performance</p>
+                </div>
+            </header>
+
+            <div class="progress-monitor">
+                <div class="class-selector">
+                    <button class="class-tab active" onclick="switchClass('10-A')">10-A</button>
+                    <button class="class-tab" onclick="switchClass('10-B')">10-B</button>
+                    <button class="class-tab" onclick="switchClass('11-A')">11-A</button>
+                    <button class="class-tab" onclick="switchClass('12-A')">12-A</button>
+                </div>
+
+                <div class="progress-grid">
+                    <div class="widget student-list-widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-users"></i> Class List</h3>
+                            <input type="search" placeholder="Search students..." oninput="filterStudents(this.value)">
+                        </div>
+                        <div class="widget-content" id="studentListContent">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="widget grade-distribution-widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-chart-bar"></i> Grade Distribution</h3>
+                        </div>
+                        <div class="widget-content">
+                            <canvas id="gradeChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="widget flagged-students-widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Students Needing Help</h3>
+                        </div>
+                        <div class="widget-content" id="flaggedStudentsContent">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Classes View -->
+        <div class="view-container" id="liveClassesView">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="page-title">Live Classes</h1>
+                    <p class="page-subtitle">Schedule and manage virtual classes</p>
+                </div>
+                <div class="header-right">
+                    <button class="quick-action-btn" onclick="showScheduleModal()">
+                        <i class="fas fa-calendar-plus"></i>
+                        Schedule New Class
+                    </button>
+                </div>
+            </header>
+
+            <div class="live-classes-grid">
+                <div class="widget scheduled-classes-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-calendar"></i> Scheduled Classes</h3>
+                    </div>
+                    <div class="widget-content" id="scheduledClassesContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="widget recordings-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-film"></i> Recorded Classes</h3>
+                    </div>
+                    <div class="widget-content" id="recordingsContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Schedule Class Modal -->
+    <div class="modal" id="scheduleModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Schedule Live Class</h2>
+                <button class="modal-close" onclick="closeScheduleModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Class</label>
+                    <select id="scheduleClass">
+                        <option value="10-A">Class 10-A</option>
+                        <option value="10-B">Class 10-B</option>
+                        <option value="11-A">Class 11-A</option>
+                        <option value="12-A">Class 12-A</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" id="scheduleSubject" placeholder="e.g., Mathematics">
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="scheduleDate">
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input type="time" id="scheduleTime">
+                </div>
+                <div class="form-group">
+                    <label>Duration (minutes)</label>
+                    <input type="number" id="scheduleDuration" value="60" min="15" max="180">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="scheduleRecording" checked>
+                        Enable Recording
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeScheduleModal()">Cancel</button>
+                <button class="btn-primary" onclick="scheduleClass()">
+                    <i class="fas fa-calendar-check"></i> Schedule Class
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

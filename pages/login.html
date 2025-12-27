@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGX - Login</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script src="../js/auth.js" defer></script>
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="login-header">
+            <div class="logo-section">
+                <i class="fas fa-brain"></i>
+                <h1 class="logo-text">QGX</h1>
+            </div>
+            <h2 class="welcome-title">Welcome to QGX Platform</h2>
+            <p class="welcome-subtitle">Select your role to continue</p>
+        </div>
+
+        <!-- Role Cards -->
+        <div class="role-cards">
+            <!-- Student Card -->
+            <div class="role-card" onclick="selectRole('student')">
+                <div class="card-icon student-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="card-title">Student</h3>
+                <p class="card-description">Take assessments, track progress</p>
+                <div class="card-stats">
+                    <span>Learn</span>
+                    <span>•</span>
+                    <span>Grow</span>
+                    <span>•</span>
+                    <span>Achieve</span>
+                </div>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Teacher Card -->
+            <div class="role-card" onclick="selectRole('teacher')">
+                <div class="card-icon teacher-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="card-title">Teacher</h3>
+                <p class="card-description">Create assessments, manage classes</p>
+                <div class="card-stats">
+                    <span>Create</span>
+                    <span>•</span>
+                    <span>Guide</span>
+                    <span>•</span>
+                    <span>Analyze</span>
+                </div>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- Admin Card -->
+            <div class="role-card" onclick="selectRole('admin')">
+                <div class="card-icon admin-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">Administrator</h3>
+                <p class="card-description">Manage platform, security, users</p>
+                <div class="card-stats">
+                    <span>Manage</span>
+                    <span>•</span>
+                    <span>Secure</span>
+                    <span>•</span>
+                    <span>Monitor</span>
+                </div>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Credentials Section -->
+        <div class="demo-credentials">
+            <h4><i class="fas fa-info-circle"></i> Demo Access</h4>
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <strong>Student:</strong> student@qgx.com / student123
+                </div>
+                <div class="credential-item">
+                    <strong>Teacher:</strong> teacher@qgx.com / teacher123
+                </div>
+                <div class="credential-item">
+                    <strong>Admin:</strong> admin@qgx.com / admin123
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="login-footer">
+            <p>QGX Platform v1.0.0 | &copy; 2025 All Rights Reserved</p>
+            <p class="footer-links">
+                <a href="#">Privacy Policy</a> • 
+                <a href="#">Terms of Service</a> • 
+                <a href="#">Support</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading your dashboard...</p>
+        </div>
+    </div>
+</body>
+</html>

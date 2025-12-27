@@ -1,0 +1,374 @@
+{
+  "features": {
+    "ghostMode": {
+      "enabled": true,
+      "name": "Ghost Mode Detection",
+      "description": "AI-powered detection of suspicious user activity and ghost accounts",
+      "lastUpdated": "2025-12-20T10:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "sensitivityLevel": "medium",
+        "autoFlagThreshold": 0.75,
+        "alertAdmins": true,
+        "quarantineSuspiciousAccounts": false
+      }
+    },
+    "voiceControl": {
+      "enabled": true,
+      "name": "Voice Control for Quizzes",
+      "description": "Allows students to use voice commands during quiz assessments",
+      "lastUpdated": "2025-11-15T14:30:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "supportedLanguages": ["en-US", "es-ES", "fr-FR"],
+        "confidenceThreshold": 0.8,
+        "fallbackToManual": true,
+        "voiceCommands": ["next", "previous", "submit", "option A", "option B", "option C", "option D"]
+      }
+    },
+    "aiGeneration": {
+      "enabled": true,
+      "name": "AI Assessment Generation",
+      "description": "Generate quiz questions automatically using AI",
+      "lastUpdated": "2025-12-01T09:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "provider": "OpenAI GPT-4",
+        "maxQuestionsPerBatch": 10,
+        "difficultyLevels": ["easy", "medium", "hard"],
+        "requireHumanReview": true,
+        "contentFiltering": true
+      }
+    },
+    "maintenanceMode": {
+      "enabled": false,
+      "name": "Maintenance Mode",
+      "description": "Temporarily disable platform access for system maintenance",
+      "lastUpdated": "2025-10-05T02:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "allowAdminAccess": true,
+        "maintenanceMessage": "System is currently undergoing scheduled maintenance. We'll be back soon!",
+        "estimatedDowntime": "2 hours",
+        "notifyUsers": true
+      }
+    },
+    "liveClasses": {
+      "enabled": true,
+      "name": "Live Virtual Classes",
+      "description": "Host and attend live video classes",
+      "lastUpdated": "2025-09-01T08:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "maxParticipants": 50,
+        "recordingSessions": true,
+        "chatEnabled": true,
+        "screenSharingEnabled": true,
+        "platformIntegration": ["Zoom", "Microsoft Teams", "Google Meet"]
+      }
+    },
+    "gamification": {
+      "enabled": true,
+      "name": "Gamification & XP System",
+      "description": "Reward students with XP points and achievements",
+      "lastUpdated": "2025-08-15T12:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "xpPerQuiz": 50,
+        "bonusForPerfectScore": 25,
+        "dailyLoginBonus": 10,
+        "achievementBadges": true,
+        "leaderboard": true,
+        "levelSystem": true
+      }
+    },
+    "darkMode": {
+      "enabled": true,
+      "name": "Dark Mode Theme",
+      "description": "Platform-wide dark theme interface",
+      "lastUpdated": "2025-07-01T10:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "defaultTheme": "dark",
+        "allowUserToggle": true,
+        "autoSwitchBasedOnTime": false
+      }
+    },
+    "notifications": {
+      "enabled": true,
+      "name": "Push Notifications",
+      "description": "Real-time notifications for important events",
+      "lastUpdated": "2025-06-20T11:00:00Z",
+      "updatedBy": "ADM-2025-003",
+      "settings": {
+        "emailNotifications": true,
+        "browserNotifications": true,
+        "mobileNotifications": false,
+        "notificationTypes": ["assignments", "grades", "announcements", "messages", "deadlines"]
+      }
+    }
+  },
+  "xpConfiguration": {
+    "pointsSystem": {
+      "quizCompletion": 50,
+      "perfectScore": 75,
+      "assessmentSubmission": 30,
+      "forumPost": 10,
+      "forumReply": 5,
+      "helpfulAnswer": 20,
+      "dailyLogin": 10,
+      "weekStreak": 100,
+      "monthStreak": 500,
+      "courseCompletion": 1000
+    },
+    "levelSystem": {
+      "level1": { "minXP": 0, "maxXP": 499, "title": "Beginner" },
+      "level2": { "minXP": 500, "maxXP": 999, "title": "Learner" },
+      "level3": { "minXP": 1000, "maxXP": 1499, "title": "Explorer" },
+      "level4": { "minXP": 1500, "maxXP": 1999, "title": "Scholar" },
+      "level5": { "minXP": 2000, "maxXP": 2499, "title": "Expert" },
+      "level6": { "minXP": 2500, "maxXP": 2999, "title": "Master" },
+      "level7": { "minXP": 3000, "maxXP": 3999, "title": "Champion" },
+      "level8": { "minXP": 4000, "maxXP": 4999, "title": "Legend" },
+      "level9": { "minXP": 5000, "maxXP": 9999, "title": "Guru" },
+      "level10": { "minXP": 10000, "maxXP": 999999, "title": "Grandmaster" }
+    },
+    "achievements": [
+      { "id": "FIRST_QUIZ", "name": "First Quiz", "description": "Complete your first quiz", "xpReward": 50, "icon": "🎯" },
+      { "id": "PERFECT_SCORE", "name": "Perfect Score", "description": "Get 100% on any assessment", "xpReward": 100, "icon": "💯" },
+      { "id": "WEEK_STREAK", "name": "Week Streak", "description": "Log in 7 days in a row", "xpReward": 100, "icon": "🔥" },
+      { "id": "FAST_LEARNER", "name": "Fast Learner", "description": "Complete 5 quizzes in one day", "xpReward": 150, "icon": "⚡" },
+      { "id": "DISCUSSION_LEADER", "name": "Discussion Leader", "description": "Post 10 helpful forum replies", "xpReward": 200, "icon": "💬" },
+      { "id": "TOP_PERFORMER", "name": "Top Performer", "description": "Maintain 90%+ average for a month", "xpReward": 300, "icon": "🌟" },
+      { "id": "STUDY_CHAMPION", "name": "Study Champion", "description": "Complete all assignments on time", "xpReward": 250, "icon": "🏆" },
+      { "id": "CODE_MASTER", "name": "Code Master", "description": "Complete all CS101 assessments", "xpReward": 400, "icon": "💻" },
+      { "id": "MATH_WIZARD", "name": "Math Wizard", "description": "Score 95%+ on 5 math assessments", "xpReward": 350, "icon": "🧙" },
+      { "id": "PERFECT_ATTENDANCE", "name": "Perfect Attendance", "description": "Attend all live classes in a month", "xpReward": 200, "icon": "📅" }
+    ]
+  },
+  "systemSettings": {
+    "platform": {
+      "name": "QGX Learning Platform",
+      "version": "2.5.0",
+      "environment": "production",
+      "baseURL": "https://platform.qgx.edu",
+      "apiVersion": "v2",
+      "maintenanceWindow": "Sunday 02:00-04:00 UTC"
+    },
+    "security": {
+      "sessionTimeout": 3600,
+      "maxLoginAttempts": 5,
+      "passwordMinLength": 8,
+      "requireSpecialCharacters": true,
+      "twoFactorAuthentication": false,
+      "ipWhitelist": [],
+      "encryptionAlgorithm": "AES-256"
+    },
+    "performance": {
+      "cacheEnabled": true,
+      "cacheDuration": 1800,
+      "maxConcurrentUsers": 5000,
+      "apiRateLimit": 1000,
+      "cdnEnabled": true,
+      "compressionEnabled": true
+    },
+    "integrations": {
+      "videoConferencing": ["Zoom", "Microsoft Teams", "Google Meet"],
+      "paymentGateway": "Stripe",
+      "emailService": "SendGrid",
+      "analyticsService": "Google Analytics",
+      "storageProvider": "AWS S3",
+      "databaseProvider": "MongoDB Atlas"
+    },
+    "limits": {
+      "maxCoursesPerStudent": 6,
+      "maxStudentsPerCourse": 150,
+      "maxFileUploadSize": 10485760,
+      "maxAssessmentDuration": 180,
+      "maxForumPostLength": 5000,
+      "maxAttachmentsPerPost": 5
+    }
+  },
+  "activityLogs": [
+    {
+      "id": "LOG-001",
+      "timestamp": "2025-12-27T13:30:15Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "FEATURE_TOGGLE",
+      "target": "ghostMode",
+      "details": "Enabled Ghost Mode Detection feature",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-002",
+      "timestamp": "2025-12-27T12:45:30Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "USER_CREATE",
+      "target": "STU-2025-011",
+      "details": "Created new student account: James Wilson",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-003",
+      "timestamp": "2025-12-27T11:20:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "SYSTEM_BACKUP",
+      "target": "database",
+      "details": "Created full system backup (2.4 GB)",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-004",
+      "timestamp": "2025-12-27T10:15:22Z",
+      "userId": "SYSTEM",
+      "userName": "System",
+      "action": "GHOST_ALERT",
+      "target": "USER-GHOST-047",
+      "details": "Ghost Mode detected suspicious activity - Confidence: 87%",
+      "ipAddress": "203.45.67.89",
+      "severity": "warning"
+    },
+    {
+      "id": "LOG-005",
+      "timestamp": "2025-12-27T09:30:45Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "SETTINGS_UPDATE",
+      "target": "xpConfiguration",
+      "details": "Updated XP points for quiz completion: 40 → 50",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-006",
+      "timestamp": "2025-12-26T18:00:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "USER_DELETE",
+      "target": "STU-2024-999",
+      "details": "Deleted inactive student account after 90 days",
+      "ipAddress": "192.168.1.100",
+      "severity": "warning"
+    },
+    {
+      "id": "LOG-007",
+      "timestamp": "2025-12-26T14:30:00Z",
+      "userId": "SYSTEM",
+      "userName": "System",
+      "action": "SCHEDULED_TASK",
+      "target": "database_cleanup",
+      "details": "Cleaned up old session data and temporary files",
+      "ipAddress": "127.0.0.1",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-008",
+      "timestamp": "2025-12-26T10:00:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "ANALYTICS_EXPORT",
+      "target": "monthly_report",
+      "details": "Exported December 2025 analytics report (PDF)",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-009",
+      "timestamp": "2025-12-25T22:15:00Z",
+      "userId": "SYSTEM",
+      "userName": "System",
+      "action": "SECURITY_SCAN",
+      "target": "all_users",
+      "details": "Completed nightly security scan - No threats detected",
+      "ipAddress": "127.0.0.1",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-010",
+      "timestamp": "2025-12-25T16:45:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "FEATURE_TOGGLE",
+      "target": "aiGeneration",
+      "details": "Enabled AI Assessment Generation feature",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-011",
+      "timestamp": "2025-12-24T20:00:00Z",
+      "userId": "SYSTEM",
+      "userName": "System",
+      "action": "GHOST_ALERT",
+      "target": "USER-GHOST-023",
+      "details": "Ghost Mode detected unusual login pattern - Confidence: 72%",
+      "ipAddress": "198.23.45.67",
+      "severity": "warning"
+    },
+    {
+      "id": "LOG-012",
+      "timestamp": "2025-12-24T14:00:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "USER_ROLE_CHANGE",
+      "target": "TCH-2025-050",
+      "details": "Changed user role from Teacher to Admin",
+      "ipAddress": "192.168.1.100",
+      "severity": "warning"
+    },
+    {
+      "id": "LOG-013",
+      "timestamp": "2025-12-23T11:30:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "SYSTEM_BACKUP",
+      "target": "database",
+      "details": "Created incremental backup (450 MB)",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-014",
+      "timestamp": "2025-12-22T09:00:00Z",
+      "userId": "SYSTEM",
+      "userName": "System",
+      "action": "DATABASE_OPTIMIZATION",
+      "target": "indexes",
+      "details": "Optimized database indexes - Performance improved by 15%",
+      "ipAddress": "127.0.0.1",
+      "severity": "info"
+    },
+    {
+      "id": "LOG-015",
+      "timestamp": "2025-12-21T15:30:00Z",
+      "userId": "ADM-2025-003",
+      "userName": "Michael Chen",
+      "action": "SETTINGS_UPDATE",
+      "target": "security",
+      "details": "Updated max login attempts: 3 → 5",
+      "ipAddress": "192.168.1.100",
+      "severity": "info"
+    }
+  ],
+  "metadata": {
+    "totalUsers": 450,
+    "activeStudents": 325,
+    "activeTeachers": 42,
+    "activeAdmins": 5,
+    "totalCourses": 35,
+    "totalAssessments": 284,
+    "totalForumThreads": 156,
+    "systemUptime": "99.97%",
+    "lastBackup": "2025-12-27T11:20:00Z",
+    "storageUsed": "48.7 GB",
+    "storageLimit": "500 GB",
+    "apiCallsToday": 45672,
+    "activeSessionsNow": 127
+  }
+}

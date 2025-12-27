@@ -1,0 +1,196 @@
+{
+  "courses": [
+    {
+      "code": "CS101",
+      "name": "Introduction to Computer Science",
+      "description": "Learn the fundamentals of programming, algorithms, and problem-solving using Python. Perfect for beginners with no prior coding experience.",
+      "teacher": {
+        "id": "TCH-2025-042",
+        "name": "Dr. Sarah Mitchell"
+      },
+      "department": "Computer Science",
+      "credits": 4,
+      "level": "Beginner",
+      "duration": "15 weeks",
+      "enrolledStudents": [
+        "STU-2025-001",
+        "STU-2025-003",
+        "STU-2025-005",
+        "STU-2025-007",
+        "STU-2025-008",
+        "STU-2025-010"
+      ],
+      "totalEnrollment": 6,
+      "syllabus": [
+        "Introduction to Programming",
+        "Variables and Data Types",
+        "Control Flow",
+        "Functions and Modules",
+        "Object-Oriented Programming",
+        "Data Structures",
+        "Algorithms",
+        "Final Project"
+      ],
+      "schedule": "Mon & Wed 10:00-11:30 AM",
+      "startDate": "2024-09-02",
+      "endDate": "2024-12-15",
+      "assessments": 8,
+      "passingGrade": 70
+    },
+    {
+      "code": "MATH201",
+      "name": "Advanced Mathematics",
+      "description": "Explore calculus, linear algebra, and discrete mathematics. Build strong mathematical foundations for STEM careers.",
+      "teacher": {
+        "id": "TCH-2025-018",
+        "name": "Prof. James Anderson"
+      },
+      "department": "Mathematics",
+      "credits": 4,
+      "level": "Intermediate",
+      "duration": "15 weeks",
+      "enrolledStudents": [
+        "STU-2025-001",
+        "STU-2025-002",
+        "STU-2025-003",
+        "STU-2025-005",
+        "STU-2025-007",
+        "STU-2025-008",
+        "STU-2025-009"
+      ],
+      "totalEnrollment": 7,
+      "syllabus": [
+        "Limits and Continuity",
+        "Derivatives",
+        "Integration",
+        "Vectors and Matrices",
+        "Linear Transformations",
+        "Eigenvalues",
+        "Probability",
+        "Statistics"
+      ],
+      "schedule": "Tue & Thu 9:00-10:30 AM",
+      "startDate": "2024-09-03",
+      "endDate": "2024-12-16",
+      "assessments": 6,
+      "passingGrade": 65
+    },
+    {
+      "code": "SCI301",
+      "name": "General Science",
+      "description": "Comprehensive introduction to physics, chemistry, and biology. Hands-on experiments and real-world applications.",
+      "teacher": {
+        "id": "TCH-2025-029",
+        "name": "Dr. Emily Roberts"
+      },
+      "department": "Science",
+      "credits": 3,
+      "level": "Intermediate",
+      "duration": "15 weeks",
+      "enrolledStudents": [
+        "STU-2025-002",
+        "STU-2025-003",
+        "STU-2025-004",
+        "STU-2025-006",
+        "STU-2025-008",
+        "STU-2025-010"
+      ],
+      "totalEnrollment": 6,
+      "syllabus": [
+        "Scientific Method",
+        "Forces and Motion",
+        "Energy and Matter",
+        "Chemical Reactions",
+        "Cell Biology",
+        "Genetics",
+        "Ecology",
+        "Environmental Science"
+      ],
+      "schedule": "Mon & Wed 2:00-3:30 PM",
+      "startDate": "2024-09-02",
+      "endDate": "2024-12-15",
+      "assessments": 7,
+      "passingGrade": 70
+    },
+    {
+      "code": "HIST101",
+      "name": "World History",
+      "description": "Journey through civilizations from ancient times to the modern era. Understand how history shapes our present.",
+      "teacher": {
+        "id": "TCH-2025-029",
+        "name": "Dr. Emily Roberts"
+      },
+      "department": "Humanities",
+      "credits": 3,
+      "level": "Beginner",
+      "duration": "15 weeks",
+      "enrolledStudents": [
+        "STU-2025-002",
+        "STU-2025-004",
+        "STU-2025-006",
+        "STU-2025-009",
+        "STU-2025-010"
+      ],
+      "totalEnrollment": 5,
+      "syllabus": [
+        "Ancient Civilizations",
+        "Classical Greece and Rome",
+        "Medieval Period",
+        "Renaissance",
+        "Age of Exploration",
+        "Industrial Revolution",
+        "World Wars",
+        "Contemporary History"
+      ],
+      "schedule": "Tue & Thu 1:00-2:30 PM",
+      "startDate": "2024-09-03",
+      "endDate": "2024-12-16",
+      "assessments": 5,
+      "passingGrade": 70
+    },
+    {
+      "code": "ENG102",
+      "name": "English Literature & Composition",
+      "description": "Develop critical reading and writing skills through classic and contemporary literature. Master essay writing and analysis.",
+      "teacher": {
+        "id": "TCH-2025-029",
+        "name": "Dr. Emily Roberts"
+      },
+      "department": "Humanities",
+      "credits": 3,
+      "level": "Beginner",
+      "duration": "15 weeks",
+      "enrolledStudents": [
+        "STU-2025-001",
+        "STU-2025-004",
+        "STU-2025-005",
+        "STU-2025-006",
+        "STU-2025-008",
+        "STU-2025-009"
+      ],
+      "totalEnrollment": 6,
+      "syllabus": [
+        "Introduction to Literature",
+        "Poetry Analysis",
+        "Short Stories",
+        "Novel Study",
+        "Essay Writing",
+        "Research Skills",
+        "Critical Thinking",
+        "Final Essay"
+      ],
+      "schedule": "Mon & Wed 11:00 AM-12:30 PM",
+      "startDate": "2024-09-02",
+      "endDate": "2024-12-15",
+      "assessments": 6,
+      "passingGrade": 70
+    }
+  ],
+  "statistics": {
+    "totalCourses": 5,
+    "totalEnrollments": 30,
+    "averageEnrollment": 6,
+    "mostPopular": "MATH201",
+    "departments": ["Computer Science", "Mathematics", "Science", "Humanities"]
+  }
+}

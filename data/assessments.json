@@ -1,0 +1,1323 @@
+{
+  "assessments": [
+    {
+      "id": "ASSESS-CS101-001",
+      "courseCode": "CS101",
+      "title": "Python Basics Quiz",
+      "type": "quiz",
+      "difficulty": "easy",
+      "totalPoints": 100,
+      "duration": 30,
+      "createdBy": "TCH-2025-042",
+      "createdAt": "2024-09-15T10:00:00Z",
+      "dueDate": "2024-09-20T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the correct way to declare a variable in Python?",
+          "type": "multiple-choice",
+          "options": ["var x = 5", "x = 5", "int x = 5", "let x = 5"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "Which data type is used for text in Python?",
+          "type": "multiple-choice",
+          "options": ["int", "str", "float", "bool"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What does the len() function do?",
+          "type": "multiple-choice",
+          "options": ["Returns the length", "Deletes items", "Creates a list", "Sorts data"],
+          "correctAnswer": 0,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "How do you start a comment in Python?",
+          "type": "multiple-choice",
+          "options": ["//", "/*", "#", "<!--"],
+          "correctAnswer": 2,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-001",
+          "submittedAt": "2024-09-19T14:30:00Z",
+          "answers": [1, 1, 0, 2],
+          "score": 100,
+          "timeTaken": 18,
+          "feedback": "Perfect score! Great work!"
+        },
+        {
+          "studentId": "STU-2025-003",
+          "submittedAt": "2024-09-19T16:45:00Z",
+          "answers": [1, 1, 0, 2],
+          "score": 100,
+          "timeTaken": 15,
+          "feedback": "Excellent understanding of Python basics!"
+        },
+        {
+          "studentId": "STU-2025-007",
+          "submittedAt": "2024-09-20T20:15:00Z",
+          "answers": [1, 1, 1, 2],
+          "score": 75,
+          "timeTaken": 28,
+          "feedback": "Good effort! Review the len() function."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-CS101-002",
+      "courseCode": "CS101",
+      "title": "Control Flow Assessment",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 45,
+      "createdBy": "TCH-2025-042",
+      "createdAt": "2024-10-01T10:00:00Z",
+      "dueDate": "2024-10-08T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the output of: if 5 > 3: print('Yes')",
+          "type": "multiple-choice",
+          "options": ["Yes", "No", "Error", "Nothing"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "Which loop is used when the number of iterations is known?",
+          "type": "multiple-choice",
+          "options": ["while", "for", "do-while", "foreach"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What keyword is used to exit a loop early?",
+          "type": "multiple-choice",
+          "options": ["exit", "break", "stop", "end"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What does 'elif' stand for?",
+          "type": "multiple-choice",
+          "options": ["else if", "element if", "evaluate if", "error if"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "Which operator is used for 'not equal to'?",
+          "type": "multiple-choice",
+          "options": ["<>", "!=", "!==", "=/="],
+          "correctAnswer": 1,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-001",
+          "submittedAt": "2024-10-07T12:00:00Z",
+          "answers": [0, 1, 1, 0, 1],
+          "score": 100,
+          "timeTaken": 35,
+          "feedback": "Outstanding! Perfect understanding of control flow."
+        },
+        {
+          "studentId": "STU-2025-008",
+          "submittedAt": "2024-10-06T18:30:00Z",
+          "answers": [0, 1, 1, 0, 1],
+          "score": 100,
+          "timeTaken": 28,
+          "feedback": "Excellent work!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-MATH201-001",
+      "courseCode": "MATH201",
+      "title": "Calculus Fundamentals",
+      "type": "quiz",
+      "difficulty": "hard",
+      "totalPoints": 100,
+      "duration": 60,
+      "createdBy": "TCH-2025-018",
+      "createdAt": "2024-09-20T09:00:00Z",
+      "dueDate": "2024-09-28T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the derivative of x²?",
+          "type": "multiple-choice",
+          "options": ["x", "2x", "x²", "2"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is the limit of (x²-1)/(x-1) as x approaches 1?",
+          "type": "multiple-choice",
+          "options": ["0", "1", "2", "undefined"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is the integral of 2x?",
+          "type": "multiple-choice",
+          "options": ["x²", "x² + C", "2", "2x + C"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is the slope of a horizontal line?",
+          "type": "multiple-choice",
+          "options": ["0", "1", "undefined", "infinity"],
+          "correctAnswer": 0,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-002",
+          "submittedAt": "2024-09-27T15:20:00Z",
+          "answers": [1, 2, 1, 0],
+          "score": 100,
+          "timeTaken": 45,
+          "feedback": "Perfect! Excellent calculus skills."
+        },
+        {
+          "studentId": "STU-2025-003",
+          "submittedAt": "2024-09-28T10:00:00Z",
+          "answers": [1, 2, 1, 0],
+          "score": 100,
+          "timeTaken": 40,
+          "feedback": "Outstanding work!"
+        },
+        {
+          "studentId": "STU-2025-005",
+          "submittedAt": "2024-09-28T19:30:00Z",
+          "answers": [1, 1, 1, 0],
+          "score": 75,
+          "timeTaken": 55,
+          "feedback": "Good job! Review limits."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-MATH201-002",
+      "courseCode": "MATH201",
+      "title": "Linear Algebra Basics",
+      "type": "assignment",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 120,
+      "createdBy": "TCH-2025-018",
+      "createdAt": "2024-10-15T09:00:00Z",
+      "dueDate": "2024-10-25T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a scalar?",
+          "type": "multiple-choice",
+          "options": ["A single number", "A vector", "A matrix", "An array"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "How many dimensions does a 3x4 matrix have?",
+          "type": "multiple-choice",
+          "options": ["3", "4", "7", "12"],
+          "correctAnswer": 3,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What is the identity matrix property?",
+          "type": "multiple-choice",
+          "options": ["All zeros", "All ones", "Diagonal ones, rest zeros", "Random values"],
+          "correctAnswer": 2,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What does transpose mean?",
+          "type": "multiple-choice",
+          "options": ["Flip rows and columns", "Multiply by -1", "Add matrices", "Delete row"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What is the determinant of a 2x2 identity matrix?",
+          "type": "multiple-choice",
+          "options": ["0", "1", "2", "-1"],
+          "correctAnswer": 1,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-008",
+          "submittedAt": "2024-10-24T22:00:00Z",
+          "answers": [0, 3, 2, 0, 1],
+          "score": 100,
+          "timeTaken": 95,
+          "feedback": "Perfect understanding of linear algebra!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-SCI301-001",
+      "courseCode": "SCI301",
+      "title": "Physics: Forces and Motion",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 40,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-09-25T14:00:00Z",
+      "dueDate": "2024-10-02T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is Newton's first law?",
+          "type": "multiple-choice",
+          "options": ["F=ma", "Object at rest stays at rest", "Action-reaction", "Gravity"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is the SI unit of force?",
+          "type": "multiple-choice",
+          "options": ["Joule", "Newton", "Watt", "Pascal"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "Acceleration is the rate of change of what?",
+          "type": "multiple-choice",
+          "options": ["Position", "Velocity", "Force", "Mass"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is the acceleration due to gravity on Earth?",
+          "type": "multiple-choice",
+          "options": ["9.8 m/s", "9.8 m/s²", "10 m/s", "10 m/s²"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-002",
+          "submittedAt": "2024-10-01T16:45:00Z",
+          "answers": [1, 1, 1, 1],
+          "score": 100,
+          "timeTaken": 32,
+          "feedback": "Excellent physics knowledge!"
+        },
+        {
+          "studentId": "STU-2025-004",
+          "submittedAt": "2024-10-02T20:00:00Z",
+          "answers": [1, 1, 0, 1],
+          "score": 75,
+          "timeTaken": 38,
+          "feedback": "Good work! Review velocity vs acceleration."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-SCI301-002",
+      "courseCode": "SCI301",
+      "title": "Chemistry: Periodic Table",
+      "type": "quiz",
+      "difficulty": "easy",
+      "totalPoints": 100,
+      "duration": 30,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-10-10T14:00:00Z",
+      "dueDate": "2024-10-17T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the symbol for Gold?",
+          "type": "multiple-choice",
+          "options": ["Go", "Au", "Gd", "Ag"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "How many elements are in the periodic table (approx)?",
+          "type": "multiple-choice",
+          "options": ["100", "118", "150", "200"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is the most abundant element in the universe?",
+          "type": "multiple-choice",
+          "options": ["Oxygen", "Carbon", "Hydrogen", "Nitrogen"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is the atomic number of Carbon?",
+          "type": "multiple-choice",
+          "options": ["6", "8", "12", "14"],
+          "correctAnswer": 0,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-006",
+          "submittedAt": "2024-10-16T11:30:00Z",
+          "answers": [1, 1, 2, 0],
+          "score": 100,
+          "timeTaken": 22,
+          "feedback": "Perfect chemistry knowledge!"
+        },
+        {
+          "studentId": "STU-2025-008",
+          "submittedAt": "2024-10-15T19:00:00Z",
+          "answers": [1, 1, 2, 0],
+          "score": 100,
+          "timeTaken": 18,
+          "feedback": "Excellent work!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-SCI301-003",
+      "courseCode": "SCI301",
+      "title": "Biology: Cell Structure",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 35,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-11-01T14:00:00Z",
+      "dueDate": "2024-11-08T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the powerhouse of the cell?",
+          "type": "multiple-choice",
+          "options": ["Nucleus", "Mitochondria", "Ribosome", "Golgi body"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What contains the genetic material?",
+          "type": "multiple-choice",
+          "options": ["Cytoplasm", "Cell membrane", "Nucleus", "Vacuole"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is the process of cell division called?",
+          "type": "multiple-choice",
+          "options": ["Meiosis", "Mitosis", "Both", "Neither"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What do ribosomes produce?",
+          "type": "multiple-choice",
+          "options": ["Energy", "Proteins", "DNA", "Lipids"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-003",
+          "submittedAt": "2024-11-07T14:20:00Z",
+          "answers": [1, 2, 2, 1],
+          "score": 100,
+          "timeTaken": 28,
+          "feedback": "Perfect biology understanding!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-HIST101-001",
+      "courseCode": "HIST101",
+      "title": "Ancient Civilizations",
+      "type": "quiz",
+      "difficulty": "easy",
+      "totalPoints": 100,
+      "duration": 30,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-09-18T13:00:00Z",
+      "dueDate": "2024-09-25T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which civilization built the pyramids?",
+          "type": "multiple-choice",
+          "options": ["Greek", "Roman", "Egyptian", "Mesopotamian"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "Where was Ancient Mesopotamia located?",
+          "type": "multiple-choice",
+          "options": ["Egypt", "Greece", "Iraq", "Italy"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "Who was the Greek god of the sea?",
+          "type": "multiple-choice",
+          "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What did the Romans speak?",
+          "type": "multiple-choice",
+          "options": ["Greek", "Latin", "English", "Arabic"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-002",
+          "submittedAt": "2024-09-24T10:15:00Z",
+          "answers": [2, 2, 2, 1],
+          "score": 100,
+          "timeTaken": 20,
+          "feedback": "Excellent historical knowledge!"
+        },
+        {
+          "studentId": "STU-2025-006",
+          "submittedAt": "2024-09-25T18:00:00Z",
+          "answers": [2, 2, 2, 1],
+          "score": 100,
+          "timeTaken": 25,
+          "feedback": "Perfect score!"
+        },
+        {
+          "studentId": "STU-2025-009",
+          "submittedAt": "2024-09-25T21:30:00Z",
+          "answers": [2, 2, 0, 1],
+          "score": 75,
+          "timeTaken": 28,
+          "feedback": "Good! Review Greek mythology."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-HIST101-002",
+      "courseCode": "HIST101",
+      "title": "Medieval Europe",
+      "type": "assignment",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 90,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-10-05T13:00:00Z",
+      "dueDate": "2024-10-15T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What were the Crusades?",
+          "type": "multiple-choice",
+          "options": ["Trade routes", "Religious wars", "Art movements", "Scientific discoveries"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "What system organized medieval society?",
+          "type": "multiple-choice",
+          "options": ["Democracy", "Feudalism", "Capitalism", "Socialism"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "Who were the Vikings?",
+          "type": "multiple-choice",
+          "options": ["Roman soldiers", "Norse seafarers", "British knights", "French nobles"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What ended the Middle Ages?",
+          "type": "multiple-choice",
+          "options": ["Industrial Revolution", "Renaissance", "World War I", "Discovery of America"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What was the Black Death?",
+          "type": "multiple-choice",
+          "options": ["A war", "A plague", "A famine", "A revolution"],
+          "correctAnswer": 1,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-004",
+          "submittedAt": "2024-10-14T16:00:00Z",
+          "answers": [1, 1, 1, 1, 1],
+          "score": 100,
+          "timeTaken": 75,
+          "feedback": "Outstanding medieval history knowledge!"
+        },
+        {
+          "studentId": "STU-2025-009",
+          "submittedAt": "2024-10-15T20:00:00Z",
+          "answers": [1, 1, 1, 0, 1],
+          "score": 80,
+          "timeTaken": 85,
+          "feedback": "Good work! Review the Renaissance."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-ENG102-001",
+      "courseCode": "ENG102",
+      "title": "Poetry Analysis",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 40,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-09-22T11:00:00Z",
+      "dueDate": "2024-09-30T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a metaphor?",
+          "type": "multiple-choice",
+          "options": ["Direct comparison", "Exaggeration", "Sound repetition", "Opposite meaning"],
+          "correctAnswer": 0,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is alliteration?",
+          "type": "multiple-choice",
+          "options": ["Rhyming words", "Repeated consonant sounds", "Line breaks", "Rhythm pattern"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "How many lines are in a sonnet?",
+          "type": "multiple-choice",
+          "options": ["10", "12", "14", "16"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is personification?",
+          "type": "multiple-choice",
+          "options": ["Human traits to objects", "Comparison using 'like'", "Extreme exaggeration", "Opposite of literal"],
+          "correctAnswer": 0,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-001",
+          "submittedAt": "2024-09-29T13:00:00Z",
+          "answers": [0, 1, 2, 0],
+          "score": 100,
+          "timeTaken": 30,
+          "feedback": "Excellent literary analysis!"
+        },
+        {
+          "studentId": "STU-2025-004",
+          "submittedAt": "2024-09-30T19:00:00Z",
+          "answers": [0, 1, 2, 0],
+          "score": 100,
+          "timeTaken": 35,
+          "feedback": "Perfect understanding of poetry!"
+        },
+        {
+          "studentId": "STU-2025-006",
+          "submittedAt": "2024-09-30T22:00:00Z",
+          "answers": [0, 1, 1, 0],
+          "score": 75,
+          "timeTaken": 38,
+          "feedback": "Good! Remember: sonnets have 14 lines."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-ENG102-002",
+      "courseCode": "ENG102",
+      "title": "Essay Writing Skills",
+      "type": "assignment",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 120,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-10-20T11:00:00Z",
+      "dueDate": "2024-11-05T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a thesis statement?",
+          "type": "multiple-choice",
+          "options": ["Introduction sentence", "Main argument", "Conclusion", "Supporting detail"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "How many paragraphs minimum in an essay?",
+          "type": "multiple-choice",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswer": 2,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What goes in the introduction?",
+          "type": "multiple-choice",
+          "options": ["Conclusion", "Hook and thesis", "References", "Body paragraphs"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What is MLA format?",
+          "type": "multiple-choice",
+          "options": ["Math formula", "Citation style", "Writing genre", "Grammar rule"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What should body paragraphs have?",
+          "type": "multiple-choice",
+          "options": ["Topic sentence and evidence", "Only opinions", "Random facts", "Questions only"],
+          "correctAnswer": 0,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-005",
+          "submittedAt": "2024-11-04T18:00:00Z",
+          "answers": [1, 2, 1, 1, 0],
+          "score": 100,
+          "timeTaken": 95,
+          "feedback": "Excellent essay writing skills!"
+        },
+        {
+          "studentId": "STU-2025-008",
+          "submittedAt": "2024-11-05T21:00:00Z",
+          "answers": [1, 2, 1, 1, 0],
+          "score": 100,
+          "timeTaken": 88,
+          "feedback": "Outstanding work!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-CS101-003",
+      "courseCode": "CS101",
+      "title": "Functions and Modules",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 45,
+      "createdBy": "TCH-2025-042",
+      "createdAt": "2024-10-20T10:00:00Z",
+      "dueDate": "2024-10-28T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "How do you define a function in Python?",
+          "type": "multiple-choice",
+          "options": ["function myFunc()", "def myFunc():", "func myFunc()", "define myFunc():"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What keyword returns a value from a function?",
+          "type": "multiple-choice",
+          "options": ["send", "return", "give", "output"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "How do you import a module?",
+          "type": "multiple-choice",
+          "options": ["include module", "using module", "import module", "require module"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What are function parameters?",
+          "type": "multiple-choice",
+          "options": ["Return values", "Input values", "Local variables", "Global constants"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-005",
+          "submittedAt": "2024-10-27T15:00:00Z",
+          "answers": [1, 1, 2, 1],
+          "score": 100,
+          "timeTaken": 38,
+          "feedback": "Perfect! Great understanding of functions."
+        },
+        {
+          "studentId": "STU-2025-010",
+          "submittedAt": "2024-10-28T20:00:00Z",
+          "answers": [1, 1, 2, 1],
+          "score": 100,
+          "timeTaken": 42,
+          "feedback": "Excellent work!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-CS101-004",
+      "courseCode": "CS101",
+      "title": "Object-Oriented Programming",
+      "type": "quiz",
+      "difficulty": "hard",
+      "totalPoints": 100,
+      "duration": 60,
+      "createdBy": "TCH-2025-042",
+      "createdAt": "2024-11-10T10:00:00Z",
+      "dueDate": "2024-11-20T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a class in OOP?",
+          "type": "multiple-choice",
+          "options": ["A function", "A blueprint for objects", "A module", "A variable"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is encapsulation?",
+          "type": "multiple-choice",
+          "options": ["Hiding data", "Creating objects", "Inheriting properties", "Calling methods"],
+          "correctAnswer": 0,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is inheritance?",
+          "type": "multiple-choice",
+          "options": ["Hiding methods", "Child class gets parent properties", "Creating instances", "Deleting objects"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is self in Python classes?",
+          "type": "multiple-choice",
+          "options": ["Global variable", "Reference to current instance", "Class name", "Function parameter"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-003",
+          "submittedAt": "2024-11-19T16:30:00Z",
+          "answers": [1, 0, 1, 1],
+          "score": 100,
+          "timeTaken": 52,
+          "feedback": "Perfect OOP knowledge!"
+        },
+        {
+          "studentId": "STU-2025-008",
+          "submittedAt": "2024-11-20T19:00:00Z",
+          "answers": [1, 0, 1, 1],
+          "score": 100,
+          "timeTaken": 48,
+          "feedback": "Excellent understanding!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-MATH201-003",
+      "courseCode": "MATH201",
+      "title": "Probability and Statistics",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 50,
+      "createdBy": "TCH-2025-018",
+      "createdAt": "2024-11-05T09:00:00Z",
+      "dueDate": "2024-11-15T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the probability of flipping heads on a fair coin?",
+          "type": "multiple-choice",
+          "options": ["0.25", "0.5", "0.75", "1"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is the mean of [2, 4, 6, 8]?",
+          "type": "multiple-choice",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is the median of [1, 3, 5, 7, 9]?",
+          "type": "multiple-choice",
+          "options": ["3", "5", "7", "9"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What does standard deviation measure?",
+          "type": "multiple-choice",
+          "options": ["Central tendency", "Spread of data", "Maximum value", "Minimum value"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-001",
+          "submittedAt": "2024-11-14T12:00:00Z",
+          "answers": [1, 1, 1, 1],
+          "score": 100,
+          "timeTaken": 40,
+          "feedback": "Perfect statistics understanding!"
+        },
+        {
+          "studentId": "STU-2025-009",
+          "submittedAt": "2024-11-15T18:00:00Z",
+          "answers": [1, 1, 1, 0],
+          "score": 75,
+          "timeTaken": 48,
+          "feedback": "Good! Review standard deviation."
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-SCI301-004",
+      "courseCode": "SCI301",
+      "title": "Environmental Science",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 40,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-11-20T14:00:00Z",
+      "dueDate": "2024-11-28T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the greenhouse effect?",
+          "type": "multiple-choice",
+          "options": ["Growing plants", "Trapping heat in atmosphere", "Photosynthesis", "Water cycle"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is biodiversity?",
+          "type": "multiple-choice",
+          "options": ["One species", "Variety of life", "Extinction", "Pollution"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is a renewable resource?",
+          "type": "multiple-choice",
+          "options": ["Coal", "Oil", "Solar energy", "Natural gas"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What causes ocean acidification?",
+          "type": "multiple-choice",
+          "options": ["Plastic", "CO2 absorption", "Oil spills", "Overfishing"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-002",
+          "submittedAt": "2024-11-27T10:00:00Z",
+          "answers": [1, 1, 2, 1],
+          "score": 100,
+          "timeTaken": 35,
+          "feedback": "Excellent environmental awareness!"
+        },
+        {
+          "studentId": "STU-2025-010",
+          "submittedAt": "2024-11-28T21:00:00Z",
+          "answers": [1, 1, 2, 1],
+          "score": 100,
+          "timeTaken": 38,
+          "feedback": "Perfect score!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-HIST101-003",
+      "courseCode": "HIST101",
+      "title": "Industrial Revolution",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 45,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-11-12T13:00:00Z",
+      "dueDate": "2024-11-22T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Where did the Industrial Revolution begin?",
+          "type": "multiple-choice",
+          "options": ["France", "Germany", "Britain", "USA"],
+          "correctAnswer": 2,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What powered early factories?",
+          "type": "multiple-choice",
+          "options": ["Electricity", "Steam", "Solar", "Wind"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What did the assembly line improve?",
+          "type": "multiple-choice",
+          "options": ["Agriculture", "Mass production", "Communication", "Transportation"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What social change occurred?",
+          "type": "multiple-choice",
+          "options": ["Rural to urban migration", "Urban to rural", "No change", "Decreased population"],
+          "correctAnswer": 0,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-006",
+          "submittedAt": "2024-11-21T14:00:00Z",
+          "answers": [2, 1, 1, 0],
+          "score": 100,
+          "timeTaken": 38,
+          "feedback": "Excellent historical understanding!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-ENG102-003",
+      "courseCode": "ENG102",
+      "title": "Critical Reading Skills",
+      "type": "quiz",
+      "difficulty": "medium",
+      "totalPoints": 100,
+      "duration": 40,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-11-18T11:00:00Z",
+      "dueDate": "2024-11-26T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the author's tone?",
+          "type": "multiple-choice",
+          "options": ["Grammar style", "Attitude toward subject", "Writing speed", "Word count"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 2,
+          "question": "What is inference?",
+          "type": "multiple-choice",
+          "options": ["Direct quote", "Reading between lines", "Summary", "Introduction"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 3,
+          "question": "What is a primary source?",
+          "type": "multiple-choice",
+          "options": ["Textbook", "Original document", "Encyclopedia", "Summary"],
+          "correctAnswer": 1,
+          "points": 25
+        },
+        {
+          "id": 4,
+          "question": "What is bias?",
+          "type": "multiple-choice",
+          "options": ["Objective fact", "Prejudice in writing", "Grammar error", "Citation style"],
+          "correctAnswer": 1,
+          "points": 25
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-009",
+          "submittedAt": "2024-11-25T16:00:00Z",
+          "answers": [1, 1, 1, 1],
+          "score": 100,
+          "timeTaken": 35,
+          "feedback": "Perfect critical reading skills!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-CS101-005",
+      "courseCode": "CS101",
+      "title": "Data Structures Final",
+      "type": "exam",
+      "difficulty": "hard",
+      "totalPoints": 100,
+      "duration": 90,
+      "createdBy": "TCH-2025-042",
+      "createdAt": "2024-12-01T10:00:00Z",
+      "dueDate": "2024-12-10T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a list in Python?",
+          "type": "multiple-choice",
+          "options": ["Immutable sequence", "Mutable sequence", "Single value", "Dictionary"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "What is the time complexity of list append?",
+          "type": "multiple-choice",
+          "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What is a dictionary?",
+          "type": "multiple-choice",
+          "options": ["Ordered list", "Key-value pairs", "Set of numbers", "String array"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What is a tuple?",
+          "type": "multiple-choice",
+          "options": ["Mutable list", "Immutable sequence", "Dictionary", "Set"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What does FIFO stand for?",
+          "type": "multiple-choice",
+          "options": ["First In First Out", "Fast In Fast Out", "Final In Final Out", "Fixed In Fixed Out"],
+          "correctAnswer": 0,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-003",
+          "submittedAt": "2024-12-09T18:00:00Z",
+          "answers": [1, 0, 1, 1, 0],
+          "score": 100,
+          "timeTaken": 75,
+          "feedback": "Perfect final exam performance!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-MATH201-004",
+      "courseCode": "MATH201",
+      "title": "Final Comprehensive Exam",
+      "type": "exam",
+      "difficulty": "hard",
+      "totalPoints": 100,
+      "duration": 120,
+      "createdBy": "TCH-2025-018",
+      "createdAt": "2024-12-05T09:00:00Z",
+      "dueDate": "2024-12-15T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the derivative of sin(x)?",
+          "type": "multiple-choice",
+          "options": ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "What is the integral of 1/x?",
+          "type": "multiple-choice",
+          "options": ["x²", "ln(x) + C", "1/x²", "e^x"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What is the determinant of [[2,0],[0,3]]?",
+          "type": "multiple-choice",
+          "options": ["0", "5", "6", "1"],
+          "correctAnswer": 2,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What is e approximately?",
+          "type": "multiple-choice",
+          "options": ["2.718", "3.14", "1.414", "1.618"],
+          "correctAnswer": 0,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What is the variance formula?",
+          "type": "multiple-choice",
+          "options": ["Sum/n", "Σ(x-mean)²/n", "Max-min", "Median"],
+          "correctAnswer": 1,
+          "points": 20
+        }
+      ],
+      "submissions": [
+        {
+          "studentId": "STU-2025-002",
+          "submittedAt": "2024-12-14T20:00:00Z",
+          "answers": [0, 1, 2, 0, 1],
+          "score": 100,
+          "timeTaken": 105,
+          "feedback": "Outstanding comprehensive knowledge!"
+        }
+      ]
+    },
+    {
+      "id": "ASSESS-ENG102-004",
+      "courseCode": "ENG102",
+      "title": "Final Literary Analysis",
+      "type": "exam",
+      "difficulty": "hard",
+      "totalPoints": 100,
+      "duration": 90,
+      "createdBy": "TCH-2025-029",
+      "createdAt": "2024-12-08T11:00:00Z",
+      "dueDate": "2024-12-18T23:59:59Z",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is irony?",
+          "type": "multiple-choice",
+          "options": ["Rhyme scheme", "Opposite of expected", "Metaphor", "Exaggeration"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 2,
+          "question": "What is foreshadowing?",
+          "type": "multiple-choice",
+          "options": ["Flashback", "Hint at future events", "Character description", "Setting details"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 3,
+          "question": "What is a protagonist?",
+          "type": "multiple-choice",
+          "options": ["Villain", "Main character", "Setting", "Theme"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 4,
+          "question": "What is symbolism?",
+          "type": "multiple-choice",
+          "options": ["Direct statement", "Object represents idea", "Character speech", "Plot summary"],
+          "correctAnswer": 1,
+          "points": 20
+        },
+        {
+          "id": 5,
+          "question": "What is the climax?",
+          "type": "multiple-choice",
+          "options": ["Ending", "Turning point", "Beginning", "Conflict introduction"],
+          "correctAnswer": 1,
+          "points": 20
+        }
+      ],
+      "submissions": []
+    }
+  ],
+  "statistics": {
+    "totalAssessments": 20,
+    "totalSubmissions": 67,
+    "averageScore": 90.4,
+    "completionRate": 67.0,
+    "assessmentsByType": {
+      "quiz": 15,
+      "assignment": 3,
+      "exam": 2
+    },
+    "assessmentsByDifficulty": {
+      "easy": 4,
+      "medium": 11,
+      "hard": 5
+    }
+  }
+}

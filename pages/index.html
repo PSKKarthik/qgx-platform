@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGX - AI Cognitive Assessment</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/splash.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main JavaScript -->
+    <script src="../js/main.js" defer></script>
+</head>
+<body class="splash-page">
+    <!-- Floating Particles Background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Main Splash Container -->
+    <div class="splash-screen">
+        <!-- QGX Logo -->
+        <div class="qgx-logo">
+            <span>Q</span>
+            <span>G</span>
+            <span>X</span>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="subtitle">Adaptive AI Cognitive Assessment Platform</p>
+
+        <!-- Features List -->
+        <div class="features-list">
+            <div class="feature-item">
+                <i class="fas fa-brain"></i>
+                <span>AI-Powered Assessment</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Real-Time Analytics</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <span>Multi-Role Support</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure & Reliable</span>
+            </div>
+        </div>
+
+        <!-- START Button -->
+        <button class="start-button" onclick="handleStart()" id="startBtn">
+            <span class="btn-text">START</span>
+            <span class="btn-loader" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+            </span>
+        </button>
+
+        <!-- Footer -->
+        <footer class="splash-footer">
+            <p>&copy; 2025 QGX Platform. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Handle START button click
+        function handleStart() {
+            const btn = document.getElementById('startBtn');
+            const btnText = btn.querySelector('.btn-text');
+            const btnLoader = btn.querySelector('.btn-loader');
+            
+            // Disable button
+            btn.disabled = true;
+            btn.style.cursor = 'not-allowed';
+            
+            // Show loading animation
+            btnText.style.display = 'none';
+            btnLoader.style.display = 'inline-block';
+            
+            // Add loading class for additional effects
+            btn.classList.add('loading');
+            
+            // Redirect after animation
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 800);
+        }
+    </script>
+</body>
+</html>

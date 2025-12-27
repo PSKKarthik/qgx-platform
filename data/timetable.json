@@ -1,0 +1,470 @@
+{
+  "weeklySchedule": {
+    "Monday": [
+      {
+        "time": "09:00-10:30",
+        "courseCode": "SCI301",
+        "courseName": "General Science",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Lab 204",
+        "type": "lecture",
+        "students": ["STU-2025-002", "STU-2025-003", "STU-2025-004", "STU-2025-006", "STU-2025-008", "STU-2025-010"]
+      },
+      {
+        "time": "10:00-11:30",
+        "courseCode": "CS101",
+        "courseName": "Introduction to Computer Science",
+        "teacher": "Dr. Sarah Mitchell",
+        "room": "CompLab 101",
+        "type": "lecture",
+        "students": ["STU-2025-001", "STU-2025-003", "STU-2025-005", "STU-2025-007", "STU-2025-008", "STU-2025-010"]
+      },
+      {
+        "time": "11:00-12:30",
+        "courseCode": "ENG102",
+        "courseName": "English Literature & Composition",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Room 302",
+        "type": "lecture",
+        "students": ["STU-2025-001", "STU-2025-004", "STU-2025-005", "STU-2025-006", "STU-2025-008", "STU-2025-009"]
+      },
+      {
+        "time": "14:00-15:30",
+        "courseCode": "SCI301",
+        "courseName": "General Science",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Lab 204",
+        "type": "lab",
+        "students": ["STU-2025-002", "STU-2025-003", "STU-2025-004", "STU-2025-006", "STU-2025-008", "STU-2025-010"]
+      }
+    ],
+    "Tuesday": [
+      {
+        "time": "09:00-10:30",
+        "courseCode": "MATH201",
+        "courseName": "Advanced Mathematics",
+        "teacher": "Prof. James Anderson",
+        "room": "Room 201",
+        "type": "lecture",
+        "students": ["STU-2025-001", "STU-2025-002", "STU-2025-003", "STU-2025-005", "STU-2025-007", "STU-2025-008", "STU-2025-009"]
+      },
+      {
+        "time": "13:00-14:30",
+        "courseCode": "HIST101",
+        "courseName": "World History",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Room 305",
+        "type": "lecture",
+        "students": ["STU-2025-002", "STU-2025-004", "STU-2025-006", "STU-2025-009", "STU-2025-010"]
+      },
+      {
+        "time": "15:00-16:30",
+        "courseCode": "MATH201",
+        "courseName": "Advanced Mathematics",
+        "teacher": "Prof. James Anderson",
+        "room": "Room 201",
+        "type": "problem-solving",
+        "students": ["STU-2025-001", "STU-2025-002", "STU-2025-003", "STU-2025-005", "STU-2025-007", "STU-2025-008", "STU-2025-009"]
+      }
+    ],
+    "Wednesday": [
+      {
+        "time": "09:00-10:30",
+        "courseCode": "SCI301",
+        "courseName": "General Science",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Lab 204",
+        "type": "lecture",
+        "students": ["STU-2025-002", "STU-2025-003", "STU-2025-004", "STU-2025-006", "STU-2025-008", "STU-2025-010"]
+      },
+      {
+        "time": "10:00-11:30",
+        "courseCode": "CS101",
+        "courseName": "Introduction to Computer Science",
+        "teacher": "Dr. Sarah Mitchell",
+        "room": "CompLab 101",
+        "type": "lab",
+        "students": ["STU-2025-001", "STU-2025-003", "STU-2025-005", "STU-2025-007", "STU-2025-008", "STU-2025-010"]
+      },
+      {
+        "time": "11:00-12:30",
+        "courseCode": "ENG102",
+        "courseName": "English Literature & Composition",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Room 302",
+        "type": "discussion",
+        "students": ["STU-2025-001", "STU-2025-004", "STU-2025-005", "STU-2025-006", "STU-2025-008", "STU-2025-009"]
+      }
+    ],
+    "Thursday": [
+      {
+        "time": "09:00-10:30",
+        "courseCode": "MATH201",
+        "courseName": "Advanced Mathematics",
+        "teacher": "Prof. James Anderson",
+        "room": "Room 201",
+        "type": "lecture",
+        "students": ["STU-2025-001", "STU-2025-002", "STU-2025-003", "STU-2025-005", "STU-2025-007", "STU-2025-008", "STU-2025-009"]
+      },
+      {
+        "time": "13:00-14:30",
+        "courseCode": "HIST101",
+        "courseName": "World History",
+        "teacher": "Dr. Emily Roberts",
+        "room": "Room 305",
+        "type": "seminar",
+        "students": ["STU-2025-002", "STU-2025-004", "STU-2025-006", "STU-2025-009", "STU-2025-010"]
+      }
+    ],
+    "Friday": [
+      {
+        "time": "10:00-11:30",
+        "courseCode": "CS101",
+        "courseName": "Introduction to Computer Science",
+        "teacher": "Dr. Sarah Mitchell",
+        "room": "CompLab 101",
+        "type": "office-hours",
+        "students": []
+      },
+      {
+        "time": "14:00-15:30",
+        "courseCode": "MATH201",
+        "courseName": "Advanced Mathematics",
+        "teacher": "Prof. James Anderson",
+        "room": "Room 201",
+        "type": "office-hours",
+        "students": []
+      }
+    ]
+  },
+  "liveClassSessions": [
+    {
+      "id": "LIVE-001",
+      "courseCode": "CS101",
+      "title": "Python Advanced Concepts Workshop",
+      "teacher": "Dr. Sarah Mitchell",
+      "date": "2025-12-30",
+      "time": "14:00-16:00",
+      "platform": "Zoom",
+      "meetingLink": "https://zoom.us/j/1234567890",
+      "meetingPassword": "QGX2025",
+      "status": "scheduled",
+      "maxParticipants": 50,
+      "enrolled": 28,
+      "description": "Deep dive into decorators, generators, and context managers",
+      "topics": ["Decorators", "Generators", "Context Managers", "Advanced Functions"]
+    },
+    {
+      "id": "LIVE-002",
+      "courseCode": "MATH201",
+      "title": "Calculus Problem Solving Session",
+      "teacher": "Prof. James Anderson",
+      "date": "2025-12-28",
+      "time": "10:00-12:00",
+      "platform": "Microsoft Teams",
+      "meetingLink": "https://teams.microsoft.com/meet/abc123",
+      "meetingPassword": "MATH2025",
+      "status": "scheduled",
+      "maxParticipants": 40,
+      "enrolled": 32,
+      "description": "Solve complex calculus problems together with live Q&A",
+      "topics": ["Integration Techniques", "Optimization", "Related Rates", "Applications"]
+    },
+    {
+      "id": "LIVE-003",
+      "courseCode": "SCI301",
+      "title": "Virtual Lab: Chemical Reactions",
+      "teacher": "Dr. Emily Roberts",
+      "date": "2026-01-03",
+      "time": "15:00-17:00",
+      "platform": "Google Meet",
+      "meetingLink": "https://meet.google.com/xyz-abc-def",
+      "meetingPassword": "SCI2025",
+      "status": "scheduled",
+      "maxParticipants": 35,
+      "enrolled": 24,
+      "description": "Interactive virtual chemistry lab with real-time experiments",
+      "topics": ["Acid-Base Reactions", "Oxidation-Reduction", "Safety Protocols", "Lab Reports"]
+    },
+    {
+      "id": "LIVE-004",
+      "courseCode": "HIST101",
+      "title": "World War II Discussion Forum",
+      "teacher": "Dr. Emily Roberts",
+      "date": "2026-01-05",
+      "time": "13:00-14:30",
+      "platform": "Zoom",
+      "meetingLink": "https://zoom.us/j/9876543210",
+      "meetingPassword": "HIST2025",
+      "status": "scheduled",
+      "maxParticipants": 30,
+      "enrolled": 18,
+      "description": "Interactive discussion on WWII causes, events, and consequences",
+      "topics": ["Causes of WWII", "Major Battles", "Holocaust", "Post-War Impact"]
+    },
+    {
+      "id": "LIVE-005",
+      "courseCode": "ENG102",
+      "title": "Creative Writing Workshop",
+      "teacher": "Dr. Emily Roberts",
+      "date": "2026-01-07",
+      "time": "11:00-13:00",
+      "platform": "Zoom",
+      "meetingLink": "https://zoom.us/j/5555555555",
+      "meetingPassword": "ENG2025",
+      "status": "scheduled",
+      "maxParticipants": 25,
+      "enrolled": 21,
+      "description": "Hands-on creative writing exercises with peer feedback",
+      "topics": ["Character Development", "Plot Structure", "Dialogue", "Editing Techniques"]
+    },
+    {
+      "id": "LIVE-006",
+      "courseCode": "CS101",
+      "title": "Final Project Presentations",
+      "teacher": "Dr. Sarah Mitchell",
+      "date": "2025-12-20",
+      "time": "10:00-13:00",
+      "platform": "Zoom",
+      "meetingLink": "https://zoom.us/j/1111111111",
+      "meetingPassword": "FINAL2025",
+      "status": "completed",
+      "maxParticipants": 50,
+      "enrolled": 45,
+      "description": "Students present their final Python projects",
+      "topics": ["Project Demos", "Code Reviews", "Q&A", "Feedback"]
+    }
+  ],
+  "assessmentDates": [
+    {
+      "id": "ASSESS-CS101-001",
+      "courseCode": "CS101",
+      "title": "Python Basics Quiz",
+      "type": "quiz",
+      "date": "2024-09-20",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 30,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-CS101-002",
+      "courseCode": "CS101",
+      "title": "Control Flow Assessment",
+      "type": "quiz",
+      "date": "2024-10-08",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 45,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-MATH201-001",
+      "courseCode": "MATH201",
+      "title": "Calculus Fundamentals",
+      "type": "quiz",
+      "date": "2024-09-28",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 60,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-MATH201-002",
+      "courseCode": "MATH201",
+      "title": "Linear Algebra Basics",
+      "type": "assignment",
+      "date": "2024-10-25",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 120,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-SCI301-001",
+      "courseCode": "SCI301",
+      "title": "Physics: Forces and Motion",
+      "type": "quiz",
+      "date": "2024-10-02",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 40,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-SCI301-002",
+      "courseCode": "SCI301",
+      "title": "Chemistry: Periodic Table",
+      "type": "quiz",
+      "date": "2024-10-17",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 30,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-HIST101-001",
+      "courseCode": "HIST101",
+      "title": "Ancient Civilizations",
+      "type": "quiz",
+      "date": "2024-09-25",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 30,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-ENG102-001",
+      "courseCode": "ENG102",
+      "title": "Poetry Analysis",
+      "type": "quiz",
+      "date": "2024-09-30",
+      "startTime": "00:00",
+      "endTime": "23:59",
+      "duration": 40,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-CS101-005",
+      "courseCode": "CS101",
+      "title": "Data Structures Final",
+      "type": "exam",
+      "date": "2024-12-10",
+      "startTime": "09:00",
+      "endTime": "23:59",
+      "duration": 90,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-MATH201-004",
+      "courseCode": "MATH201",
+      "title": "Final Comprehensive Exam",
+      "type": "exam",
+      "date": "2024-12-15",
+      "startTime": "09:00",
+      "endTime": "23:59",
+      "duration": 120,
+      "status": "completed"
+    },
+    {
+      "id": "ASSESS-ENG102-004",
+      "courseCode": "ENG102",
+      "title": "Final Literary Analysis",
+      "type": "exam",
+      "date": "2024-12-18",
+      "startTime": "09:00",
+      "endTime": "23:59",
+      "duration": 90,
+      "status": "active"
+    },
+    {
+      "id": "UPCOMING-001",
+      "courseCode": "CS101",
+      "title": "Advanced Python Concepts",
+      "type": "quiz",
+      "date": "2026-01-10",
+      "startTime": "10:00",
+      "endTime": "23:59",
+      "duration": 60,
+      "status": "upcoming"
+    },
+    {
+      "id": "UPCOMING-002",
+      "courseCode": "MATH201",
+      "title": "Applied Statistics Quiz",
+      "type": "quiz",
+      "date": "2026-01-15",
+      "startTime": "09:00",
+      "endTime": "23:59",
+      "duration": 50,
+      "status": "upcoming"
+    },
+    {
+      "id": "UPCOMING-003",
+      "courseCode": "SCI301",
+      "title": "Ecology and Environment Test",
+      "type": "quiz",
+      "date": "2026-01-12",
+      "startTime": "14:00",
+      "endTime": "23:59",
+      "duration": 45,
+      "status": "upcoming"
+    }
+  ],
+  "holidays": [
+    {
+      "name": "Winter Break",
+      "startDate": "2024-12-20",
+      "endDate": "2025-01-05",
+      "type": "semester-break"
+    },
+    {
+      "name": "Spring Break",
+      "startDate": "2025-03-15",
+      "endDate": "2025-03-22",
+      "type": "semester-break"
+    }
+  ],
+  "officeHours": {
+    "TCH-2025-042": {
+      "name": "Dr. Sarah Mitchell",
+      "schedule": [
+        {
+          "day": "Monday",
+          "time": "14:00-16:00",
+          "location": "CompLab 101"
+        },
+        {
+          "day": "Wednesday",
+          "time": "14:00-16:00",
+          "location": "CompLab 101"
+        }
+      ]
+    },
+    "TCH-2025-018": {
+      "name": "Prof. James Anderson",
+      "schedule": [
+        {
+          "day": "Tuesday",
+          "time": "15:00-17:00",
+          "location": "Room 201"
+        },
+        {
+          "day": "Thursday",
+          "time": "15:00-17:00",
+          "location": "Room 201"
+        }
+      ]
+    },
+    "TCH-2025-029": {
+      "name": "Dr. Emily Roberts",
+      "schedule": [
+        {
+          "day": "Monday",
+          "time": "13:00-14:00",
+          "location": "Room 302"
+        },
+        {
+          "day": "Tuesday",
+          "time": "13:00-14:00",
+          "location": "Room 302"
+        },
+        {
+          "day": "Wednesday",
+          "time": "13:00-14:00",
+          "location": "Room 302"
+        },
+        {
+          "day": "Thursday",
+          "time": "13:00-14:00",
+          "location": "Room 302"
+        },
+        {
+          "day": "Friday",
+          "time": "13:00-14:00",
+          "location": "Room 302"
+        }
+      ]
+    }
+  }
+}

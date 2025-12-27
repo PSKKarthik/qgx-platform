@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - QGX</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/student.js" defer></script>
+</head>
+<body class="dashboard-page student-dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-photo" id="profilePhoto">
+                <img src="https://ui-avatars.com/api/?name=Alex+Johnson&background=667eea&color=fff&size=128" alt="Student Photo">
+            </div>
+            <h3 class="profile-name" id="profileName">Alex Johnson</h3>
+            <p class="profile-id" id="profileId">STU-2025-001</p>
+            <div class="xp-badge">
+                <i class="fas fa-star"></i>
+                <span id="xpPoints">1250 XP</span>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="sidebar-nav">
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#" onclick="navigateTo('dashboard')">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('timetable')">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Timetable</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('assessments')">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Assessments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('materials')">
+                        <i class="fas fa-book"></i>
+                        <span>Study Materials</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('forums')">
+                        <i class="fas fa-comments"></i>
+                        <span>Forums</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('messages')">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="navigateTo('settings')">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-logout">
+                    <a href="#" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1 class="page-title">Dashboard</h1>
+                <p class="page-subtitle">Welcome back, <span id="welcomeName">Alex</span>!</p>
+            </div>
+            <div class="header-right">
+                <button class="quick-action-btn" onclick="quickStartAssessment()">
+                    <i class="fas fa-play"></i>
+                    Start Assessment
+                </button>
+                <button class="quick-action-btn secondary" onclick="viewNotifications()">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">5</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Widgets Grid -->
+        <div class="dashboard-grid">
+            <!-- Student Card Widget -->
+            <div class="widget student-card-widget">
+                <div class="student-card-header">
+                    <div class="student-photo-large">
+                        <img src="https://ui-avatars.com/api/?name=Alex+Johnson&background=667eea&color=fff&size=200" alt="Alex Johnson">
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="student-info">
+                        <h2 class="student-name" id="studentCardName">Alex Johnson</h2>
+                        <p class="student-id-large" id="studentCardId">STU-2025-001</p>
+                        <p class="student-class">Class: <strong>10-A</strong></p>
+                    </div>
+                </div>
+
+                <!-- XP Progress Bar -->
+                <div class="xp-progress-section">
+                    <div class="xp-header">
+                        <span class="xp-label">Level 5</span>
+                        <span class="xp-value">1250 / 1500 XP</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 83%"></div>
+                    </div>
+                    <p class="xp-info">250 XP to next level</p>
+                </div>
+
+                <!-- Performance Tags -->
+                <div class="performance-tags">
+                    <span class="tag purple"><i class="fas fa-bolt"></i> Fast Learner</span>
+                    <span class="tag gold"><i class="fas fa-trophy"></i> Perfect Score</span>
+                    <span class="tag blue"><i class="fas fa-check-circle"></i> Consistent</span>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-fire"></i>
+                        <div>
+                            <p class="stat-value">12</p>
+                            <p class="stat-label">Day Streak</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-medal"></i>
+                        <div>
+                            <p class="stat-value">#15</p>
+                            <p class="stat-label">Class Rank</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <p class="stat-value">85%</p>
+                            <p class="stat-label">Average</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Timetable Widget -->
+            <div class="widget timetable-widget">
+                <div class="widget-header">
+                    <h3><i class="fas fa-calendar-day"></i> Today's Schedule</h3>
+                    <button class="widget-action" onclick="viewFullTimetable()">View All</button>
+                </div>
+                <div class="widget-content">
+                    <div class="timeline-item">
+                        <div class="timeline-time">8:00 AM</div>
+                        <div class="timeline-content">
+                            <h4>Mathematics</h4>
+                            <p>Room 204 • Mr. Anderson</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">9:30 AM</div>
+                        <div class="timeline-content">
+                            <h4>Physics</h4>
+                            <p>Lab 3 • Dr. Martinez</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-time">11:00 AM</div>
+                        <div class="timeline-content">
+                            <h4>Chemistry</h4>
+                            <p>Lab 1 • Ms. Thompson</p>
+                            <span class="current-badge">Current</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">1:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>English</h4>
+                            <p>Room 105 • Mrs. Davis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Assessments Widget -->
+            <div class="widget assessments-widget">
+                <div class="widget-header">
+                    <h3><i class="fas fa-clipboard-check"></i> Upcoming Assessments</h3>
+                    <button class="widget-action" onclick="viewAllAssessments()">View All</button>
+                </div>
+                <div class="widget-content">
+                    <div class="assessment-item urgent">
+                        <div class="assessment-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="assessment-details">
+                            <h4>Mathematics Quiz</h4>
+                            <p>Chapter 5: Trigonometry</p>
+                            <span class="assessment-date"><i class="fas fa-clock"></i> Tomorrow, 9:00 AM</span>
+                        </div>
+                        <button class="assessment-btn" onclick="startAssessment('math-quiz-001')">Start</button>
+                    </div>
+                    <div class="assessment-item">
+                        <div class="assessment-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="assessment-details">
+                            <h4>Physics Test</h4>
+                            <p>Unit 3: Thermodynamics</p>
+                            <span class="assessment-date"><i class="fas fa-clock"></i> Dec 28, 11:00 AM</span>
+                        </div>
+                        <button class="assessment-btn" onclick="startAssessment('physics-test-001')">Start</button>
+                    </div>
+                    <div class="assessment-item">
+                        <div class="assessment-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="assessment-details">
+                            <h4>Chemistry Lab Report</h4>
+                            <p>Experiment 12</p>
+                            <span class="assessment-date"><i class="fas fa-clock"></i> Jan 2, 2:00 PM</span>
+                        </div>
+                        <button class="assessment-btn" onclick="startAssessment('chem-lab-001')">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Heatmap Widget -->
+            <div class="widget heatmap-widget">
+                <div class="widget-header">
+                    <h3><i class="fas fa-chart-bar"></i> Activity Heatmap</h3>
+                    <span class="widget-info">Last 12 weeks</span>
+                </div>
+                <div class="widget-content">
+                    <div class="heatmap-grid" id="activityHeatmap">
+                        <!-- Generated by JavaScript -->
+                    </div>
+                    <div class="heatmap-legend">
+                        <span>Less</span>
+                        <div class="legend-scale">
+                            <span class="legend-box level-0"></span>
+                            <span class="legend-box level-1"></span>
+                            <span class="legend-box level-2"></span>
+                            <span class="legend-box level-3"></span>
+                            <span class="legend-box level-4"></span>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Feed -->
+            <div class="widget activity-feed-widget">
+                <div class="widget-header">
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    <button class="widget-action" onclick="viewAllActivity()">View All</button>
+                </div>
+                <div class="widget-content">
+                    <div class="activity-item">
+                        <div class="activity-icon success">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Completed Physics Assignment</h4>
+                            <p>Score: 92/100</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon info">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Studied Chemistry Notes</h4>
+                            <p>Chapter 8: Organic Chemistry</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon warning">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Earned Badge: Fast Learner</h4>
+                            <p>Completed 5 quizzes in one day</p>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon success">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Perfect Score Achievement</h4>
+                            <p>Mathematics Quiz - 100%</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

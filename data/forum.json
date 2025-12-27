@@ -1,0 +1,548 @@
+{
+  "threads": [
+    {
+      "id": "THREAD-001",
+      "courseCode": "CS101",
+      "courseName": "Introduction to Computer Science",
+      "title": "How to debug Python errors?",
+      "author": {
+        "id": "STU-2025-007",
+        "name": "Noah Williams",
+        "isAnonymous": false
+      },
+      "content": "I keep getting 'IndexError: list index out of range' when trying to access my list. What does this mean and how can I fix it?",
+      "tags": ["debugging", "errors", "lists"],
+      "createdAt": "2024-11-15T10:30:00Z",
+      "updatedAt": "2024-11-15T14:22:00Z",
+      "views": 87,
+      "upvotes": 12,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-001-001",
+          "author": {
+            "id": "STU-2025-003",
+            "name": "Michael Chen",
+            "isAnonymous": false
+          },
+          "content": "This error happens when you try to access an index that doesn't exist in the list. For example, if your list has 3 items (indices 0, 1, 2) and you try to access index 3, you'll get this error. Always check the length of your list with len() before accessing indices!",
+          "createdAt": "2024-11-15T11:05:00Z",
+          "upvotes": 8,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-001-002",
+          "author": {
+            "id": "TCH-2025-042",
+            "name": "Dr. Sarah Mitchell",
+            "isAnonymous": false
+          },
+          "content": "Great explanation Michael! Also, Noah, you can use try-except blocks to handle these errors gracefully. We'll cover exception handling in next week's lecture.",
+          "createdAt": "2024-11-15T14:22:00Z",
+          "upvotes": 15,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-002",
+      "courseCode": "MATH201",
+      "courseName": "Advanced Mathematics",
+      "title": "Integration by parts confusion",
+      "author": {
+        "id": "ANONYMOUS-001",
+        "name": "Anonymous Student",
+        "isAnonymous": true
+      },
+      "content": "I'm struggling to understand when to use integration by parts vs substitution. Can someone explain the difference?",
+      "tags": ["calculus", "integration", "help"],
+      "createdAt": "2024-10-28T16:45:00Z",
+      "updatedAt": "2024-10-28T19:30:00Z",
+      "views": 124,
+      "upvotes": 18,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-002-001",
+          "author": {
+            "id": "STU-2025-002",
+            "name": "Emma Davis",
+            "isAnonymous": false
+          },
+          "content": "Use substitution when you can identify a function and its derivative in the integral. Use integration by parts when you have a product of two functions that don't fit the substitution pattern. Remember the formula: ∫u dv = uv - ∫v du",
+          "createdAt": "2024-10-28T17:20:00Z",
+          "upvotes": 22,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-002-002",
+          "author": {
+            "id": "TCH-2025-018",
+            "name": "Prof. James Anderson",
+            "isAnonymous": false
+          },
+          "content": "Excellent answer Emma! A good rule of thumb: try substitution first, it's usually simpler. If that doesn't work, consider integration by parts. The acronym LIATE (Logarithmic, Inverse trig, Algebraic, Trig, Exponential) helps you choose which function to set as 'u'.",
+          "createdAt": "2024-10-28T19:30:00Z",
+          "upvotes": 35,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-003",
+      "courseCode": "SCI301",
+      "courseName": "General Science",
+      "title": "Lab report formatting question",
+      "author": {
+        "id": "STU-2025-004",
+        "name": "Sophia Martinez",
+        "isAnonymous": false
+      },
+      "content": "What sections should be included in our chemistry lab report? And in what order?",
+      "tags": ["lab-report", "chemistry", "assignment"],
+      "createdAt": "2024-11-02T13:15:00Z",
+      "updatedAt": "2024-11-02T15:00:00Z",
+      "views": 56,
+      "upvotes": 9,
+      "isPinned": true,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-003-001",
+          "author": {
+            "id": "TCH-2025-029",
+            "name": "Dr. Emily Roberts",
+            "isAnonymous": false
+          },
+          "content": "Great question! Your lab report should include: 1) Title and Date, 2) Objective/Purpose, 3) Materials, 4) Procedure, 5) Data/Observations, 6) Analysis/Calculations, 7) Conclusion, 8) References. Make sure to include diagrams where appropriate and always cite your sources!",
+          "createdAt": "2024-11-02T14:10:00Z",
+          "upvotes": 28,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-003-002",
+          "author": {
+            "id": "STU-2025-006",
+            "name": "Olivia Brown",
+            "isAnonymous": false
+          },
+          "content": "Thanks Dr. Roberts! Should we include unsuccessful attempts in our procedure section?",
+          "createdAt": "2024-11-02T14:45:00Z",
+          "upvotes": 5,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-003-003",
+          "author": {
+            "id": "TCH-2025-029",
+            "name": "Dr. Emily Roberts",
+            "isAnonymous": false
+          },
+          "content": "Yes! Scientific honesty is crucial. Mention any errors or unexpected results in your analysis section and explain what might have caused them. This shows critical thinking!",
+          "createdAt": "2024-11-02T15:00:00Z",
+          "upvotes": 12,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-004",
+      "courseCode": "HIST101",
+      "courseName": "World History",
+      "title": "Renaissance vs Reformation?",
+      "author": {
+        "id": "STU-2025-009",
+        "name": "Ethan Rodriguez",
+        "isAnonymous": false
+      },
+      "content": "Can someone explain the main differences between the Renaissance and the Reformation? They seem to overlap in time periods.",
+      "tags": ["renaissance", "reformation", "history"],
+      "createdAt": "2024-10-12T09:20:00Z",
+      "updatedAt": "2024-10-12T11:45:00Z",
+      "views": 98,
+      "upvotes": 14,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-004-001",
+          "author": {
+            "id": "STU-2025-006",
+            "name": "Olivia Brown",
+            "isAnonymous": false
+          },
+          "content": "The Renaissance was a cultural movement focused on art, science, and humanism (14th-17th century). The Reformation was a religious movement that challenged Catholic Church authority (16th century). They did overlap but had different focuses - one cultural, one religious.",
+          "createdAt": "2024-10-12T10:15:00Z",
+          "upvotes": 16,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-004-002",
+          "author": {
+            "id": "STU-2025-002",
+            "name": "Emma Davis",
+            "isAnonymous": false
+          },
+          "content": "To add to Olivia's answer: Renaissance = rebirth of classical learning, art (Da Vinci, Michelangelo). Reformation = Martin Luther, Protestant churches, Bible translations. Both promoted individualism and questioning traditional authority!",
+          "createdAt": "2024-10-12T11:45:00Z",
+          "upvotes": 11,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-005",
+      "courseCode": "ENG102",
+      "courseName": "English Literature & Composition",
+      "title": "Thesis statement help needed",
+      "author": {
+        "id": "ANONYMOUS-002",
+        "name": "Anonymous Student",
+        "isAnonymous": true
+      },
+      "content": "I'm writing an essay about symbolism in 'The Great Gatsby' but my thesis feels too broad. Any tips for narrowing it down?",
+      "tags": ["essay", "thesis", "literature"],
+      "createdAt": "2024-11-08T14:30:00Z",
+      "updatedAt": "2024-11-08T16:20:00Z",
+      "views": 67,
+      "upvotes": 10,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-005-001",
+          "author": {
+            "id": "STU-2025-001",
+            "name": "Alex Johnson",
+            "isAnonymous": false
+          },
+          "content": "Instead of 'symbolism in The Great Gatsby', focus on ONE specific symbol like the green light or the eyes of Dr. T.J. Eckleburg. Then make an argument about what that symbol represents and why it's important to the novel's themes.",
+          "createdAt": "2024-11-08T15:10:00Z",
+          "upvotes": 13,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-005-002",
+          "author": {
+            "id": "TCH-2025-029",
+            "name": "Dr. Emily Roberts",
+            "isAnonymous": false
+          },
+          "content": "Great advice Alex! Remember: a strong thesis is specific, arguable, and reveals your unique interpretation. For example: 'The green light in The Great Gatsby symbolizes not just Gatsby's dream of Daisy, but the broader American Dream's ultimate unattainability.'",
+          "createdAt": "2024-11-08T16:20:00Z",
+          "upvotes": 24,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-006",
+      "courseCode": "CS101",
+      "courseName": "Introduction to Computer Science",
+      "title": "Best resources for learning Python?",
+      "author": {
+        "id": "STU-2025-010",
+        "name": "Isabella Lee",
+        "isAnonymous": false
+      },
+      "content": "I want to practice more Python outside of class. What are some good free resources or websites you recommend?",
+      "tags": ["python", "resources", "self-study"],
+      "createdAt": "2024-09-25T11:00:00Z",
+      "updatedAt": "2024-09-25T18:45:00Z",
+      "views": 142,
+      "upvotes": 25,
+      "isPinned": true,
+      "isSolved": false,
+      "replies": [
+        {
+          "id": "REPLY-006-001",
+          "author": {
+            "id": "STU-2025-003",
+            "name": "Michael Chen",
+            "isAnonymous": false
+          },
+          "content": "I love Codecademy's Python course (free version), LeetCode for practice problems, and the official Python documentation. Also check out Real Python for tutorials!",
+          "createdAt": "2024-09-25T12:30:00Z",
+          "upvotes": 18,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-006-002",
+          "author": {
+            "id": "STU-2025-008",
+            "name": "Ava Garcia",
+            "isAnonymous": false
+          },
+          "content": "HackerRank and Codewars are great for challenges! YouTube channels like Corey Schafer and Tech With Tim have excellent Python tutorials too.",
+          "createdAt": "2024-09-25T14:15:00Z",
+          "upvotes": 22,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-006-003",
+          "author": {
+            "id": "TCH-2025-042",
+            "name": "Dr. Sarah Mitchell",
+            "isAnonymous": false
+          },
+          "content": "All excellent suggestions! I'd also add: Automate the Boring Stuff with Python (free online book), Project Euler for math-based problems, and building your own small projects. The best way to learn is by doing!",
+          "createdAt": "2024-09-25T18:45:00Z",
+          "upvotes": 31,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-007",
+      "courseCode": "MATH201",
+      "courseName": "Advanced Mathematics",
+      "title": "Study group for final exam?",
+      "author": {
+        "id": "STU-2025-005",
+        "name": "Liam Thompson",
+        "isAnonymous": false
+      },
+      "content": "Anyone interested in forming a study group for the MATH201 final? We could meet on Discord or Zoom to review topics together.",
+      "tags": ["study-group", "exam", "collaboration"],
+      "createdAt": "2024-12-01T08:00:00Z",
+      "updatedAt": "2024-12-01T20:30:00Z",
+      "views": 89,
+      "upvotes": 20,
+      "isPinned": false,
+      "isSolved": false,
+      "replies": [
+        {
+          "id": "REPLY-007-001",
+          "author": {
+            "id": "STU-2025-002",
+            "name": "Emma Davis",
+            "isAnonymous": false
+          },
+          "content": "I'm in! Let's create a Discord server. I'm strongest in calculus but need help with linear algebra.",
+          "createdAt": "2024-12-01T09:15:00Z",
+          "upvotes": 8,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-007-002",
+          "author": {
+            "id": "STU-2025-008",
+            "name": "Ava Garcia",
+            "isAnonymous": false
+          },
+          "content": "Count me in! I can help with linear algebra. How about we meet this Saturday at 2 PM on Zoom?",
+          "createdAt": "2024-12-01T11:30:00Z",
+          "upvotes": 12,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-007-003",
+          "author": {
+            "id": "STU-2025-001",
+            "name": "Alex Johnson",
+            "isAnonymous": false
+          },
+          "content": "I'd love to join! DM me the Discord link please.",
+          "createdAt": "2024-12-01T14:45:00Z",
+          "upvotes": 6,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-007-004",
+          "author": {
+            "id": "TCH-2025-018",
+            "name": "Prof. James Anderson",
+            "isAnonymous": false
+          },
+          "content": "Great initiative! Study groups are highly effective. I'll be available during office hours this week if your group has specific questions. Good luck everyone!",
+          "createdAt": "2024-12-01T20:30:00Z",
+          "upvotes": 25,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-008",
+      "courseCode": "SCI301",
+      "courseName": "General Science",
+      "title": "Climate change project ideas?",
+      "author": {
+        "id": "ANONYMOUS-003",
+        "name": "Anonymous Student",
+        "isAnonymous": true
+      },
+      "content": "I need to do a presentation on climate change for my final project. Looking for unique angles or topics that aren't too overdone. Suggestions?",
+      "tags": ["project", "climate-change", "environment"],
+      "createdAt": "2024-11-20T10:00:00Z",
+      "updatedAt": "2024-11-20T15:30:00Z",
+      "views": 73,
+      "upvotes": 11,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-008-001",
+          "author": {
+            "id": "STU-2025-010",
+            "name": "Isabella Lee",
+            "isAnonymous": false
+          },
+          "content": "How about focusing on ocean acidification? It's less talked about than global warming but equally important. You could discuss its impact on marine ecosystems and coral reefs.",
+          "createdAt": "2024-11-20T11:20:00Z",
+          "upvotes": 14,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-008-002",
+          "author": {
+            "id": "STU-2025-004",
+            "name": "Sophia Martinez",
+            "isAnonymous": false
+          },
+          "content": "Or you could explore the relationship between climate change and food security - how changing weather patterns affect agriculture and global food supply.",
+          "createdAt": "2024-11-20T13:00:00Z",
+          "upvotes": 9,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-008-003",
+          "author": {
+            "id": "TCH-2025-029",
+            "name": "Dr. Emily Roberts",
+            "isAnonymous": false
+          },
+          "content": "Both excellent suggestions! Another unique angle: the feedback loops in climate systems (like Arctic ice melt → less solar reflection → more warming). Make sure to include recent data and credible sources!",
+          "createdAt": "2024-11-20T15:30:00Z",
+          "upvotes": 18,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-009",
+      "courseCode": "CS101",
+      "courseName": "Introduction to Computer Science",
+      "title": "Understanding recursion",
+      "author": {
+        "id": "STU-2025-007",
+        "name": "Noah Williams",
+        "isAnonymous": false
+      },
+      "content": "I'm really struggling with the concept of recursion. Can someone explain it in simple terms with an example?",
+      "tags": ["recursion", "algorithms", "help"],
+      "createdAt": "2024-11-25T16:00:00Z",
+      "updatedAt": "2024-11-25T19:15:00Z",
+      "views": 105,
+      "upvotes": 16,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-009-001",
+          "author": {
+            "id": "STU-2025-003",
+            "name": "Michael Chen",
+            "isAnonymous": false
+          },
+          "content": "Think of recursion like Russian nesting dolls - a function that calls itself with a smaller version of the problem until it reaches a base case. Classic example: factorial. factorial(5) = 5 * factorial(4), which calls factorial(3), etc., until factorial(1) = 1 (base case).",
+          "createdAt": "2024-11-25T17:10:00Z",
+          "upvotes": 23,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-009-002",
+          "author": {
+            "id": "STU-2025-008",
+            "name": "Ava Garcia",
+            "isAnonymous": false
+          },
+          "content": "Great explanation! Key things to remember: 1) Always have a base case (stopping condition), 2) Each recursive call should move toward the base case, 3) The function calls itself with modified parameters.",
+          "createdAt": "2024-11-25T18:00:00Z",
+          "upvotes": 15,
+          "isAnswer": false
+        },
+        {
+          "id": "REPLY-009-003",
+          "author": {
+            "id": "TCH-2025-042",
+            "name": "Dr. Sarah Mitchell",
+            "isAnonymous": false
+          },
+          "content": "Excellent explanations! Noah, try visualizing it: draw a tree showing how factorial(5) branches into 5 * factorial(4), then how factorial(4) branches, etc. Visual representation often helps. Practice with Fibonacci sequence next!",
+          "createdAt": "2024-11-25T19:15:00Z",
+          "upvotes": 20,
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": "THREAD-010",
+      "courseCode": "ENG102",
+      "courseName": "English Literature & Composition",
+      "title": "MLA vs APA formatting?",
+      "author": {
+        "id": "STU-2025-009",
+        "name": "Ethan Rodriguez",
+        "isAnonymous": false
+      },
+      "content": "What's the difference between MLA and APA citation styles? When should I use each one?",
+      "tags": ["citations", "mla", "apa", "writing"],
+      "createdAt": "2024-10-18T12:00:00Z",
+      "updatedAt": "2024-10-18T14:30:00Z",
+      "views": 91,
+      "upvotes": 13,
+      "isPinned": false,
+      "isSolved": true,
+      "replies": [
+        {
+          "id": "REPLY-010-001",
+          "author": {
+            "id": "STU-2025-006",
+            "name": "Olivia Brown",
+            "isAnonymous": false
+          },
+          "content": "MLA (Modern Language Association) is typically used for humanities - literature, languages, arts. APA (American Psychological Association) is used for social sciences - psychology, sociology, education. Main difference: MLA uses author-page number (Smith 45), APA uses author-year (Smith, 2020).",
+          "createdAt": "2024-10-18T13:00:00Z",
+          "upvotes": 19,
+          "isAnswer": true
+        },
+        {
+          "id": "REPLY-010-002",
+          "author": {
+            "id": "TCH-2025-029",
+            "name": "Dr. Emily Roberts",
+            "isAnonymous": false
+          },
+          "content": "Perfect answer Olivia! For this course (ENG102), we'll use MLA format. Purdue OWL website has excellent guides for both styles. When in doubt about which style to use, always ask your instructor!",
+          "createdAt": "2024-10-18T14:30:00Z",
+          "upvotes": 16,
+          "isAnswer": false
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "totalThreads": 10,
+    "totalReplies": 26,
+    "activeUsers": 24,
+    "solvedThreads": 8,
+    "averageViewsPerThread": 93.1,
+    "mostActiveUser": "STU-2025-003",
+    "mostPopularCourse": "CS101",
+    "anonymousPosts": 3
+  },
+  "popularTags": [
+    { "tag": "python", "count": 3 },
+    { "tag": "help", "count": 3 },
+    { "tag": "calculus", "count": 2 },
+    { "tag": "essay", "count": 2 },
+    { "tag": "exam", "count": 1 },
+    { "tag": "debugging", "count": 1 },
+    { "tag": "integration", "count": 1 },
+    { "tag": "lab-report", "count": 1 },
+    { "tag": "history", "count": 1 },
+    { "tag": "literature", "count": 1 }
+  ]
+}
