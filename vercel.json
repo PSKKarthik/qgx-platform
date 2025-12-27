@@ -1,44 +1,20 @@
 {
-  "version": 2,
-  "name": "qgx-platform",
-  "builds": [
+  "rewrites": [
     {
-      "src": "pages/**/*.html",
-      "use": "@vercel/static"
+      "source": "/login",
+      "destination": "/pages/login.html"
     },
     {
-      "src": "css/**/*.css",
-      "use": "@vercel/static"
+      "source": "/student",
+      "destination": "/pages/student.html"
     },
     {
-      "src": "js/**/*.js",
-      "use": "@vercel/static"
+      "source": "/teacher",
+      "destination": "/pages/teacher.html"
     },
     {
-      "src": "data/**/*.json",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/pages/index.html"
-    },
-    {
-      "src": "/login",
-      "dest": "/pages/login.html"
-    },
-    {
-      "src": "/student",
-      "dest": "/pages/student.html"
-    },
-    {
-      "src": "/teacher",
-      "dest": "/pages/teacher.html"
-    },
-    {
-      "src": "/admin",
-      "dest": "/pages/admin.html"
+      "source": "/admin",
+      "destination": "/pages/admin.html"
     }
   ],
   "headers": [
